@@ -1,0 +1,69 @@
+<!--all部-->
+<div class="scrollable">  
+  <div class="scrollable-content">
+
+<div class="m-all-0">
+<!---bottom部-->
+<div class="bottom">
+
+<div class="bottom-back">
+
+    <div class="bot-01">
+    <img class="bot-back01" src="img/open-packet.png"/>
+    </div>
+    <div class="bot-text01">
+        <span>{{amount}}元</span>
+    </div>
+
+
+    <div class="container-center01">
+
+        <div class="container-center-b0">
+       <div class="center-02">
+           <p style="text-align:center;">
+               到期时间：{{insDate | date:'yyyy-MM-dd'}}<br/><br/>
+               活动规则
+           </p>
+           <div style="  width: 100%; height: 256px; overflow: scroll; text-align: left;" class="scrollable-content">
+             <p>
+                 1.红包金额：3元、5元、10元、20元、50元。<br/>
+                  2.投资100元-1000元，获得5个随机红包（3元、5元）,投资1000元-5000元，获得10个随机红包（3元、5元、10元）,投资5000元-10000元，获得15个随机红包（5元、10元、20元）投资10000元以上，获得20个随机红包（10元、20元、50元）。<br/>
+                  
+                 3.用户获得红包分享后自己可拆红包获得奖励，分享后其他人员领取红包后，发红包人可获得同样金额奖励。<br/>
+                 4.其他人员领取红包后，如果是已注册会员，可点击分享，获得同样数目的红包继续传递，未注册会员，需要注册后才能继续分享，二次分享后其他人领取红包后二次分享的人同样获得等值奖励，<b
+                          style="color: #FF0000;">获得奖励实时短信提醒用户（或者一天统计通知一次）。</b><br/>
+                 5.投资获得的红包都有唯一id，后续继续分享的红包虽然分享人变了，单也都带有此id，一个用户只能领取一次同id红包。<br/>
+                 6.投资一月标，红包可抵实际投资金额的0.5%，投资三月标，红包可抵实际投资金额的1%，投资六月标，红包可抵实际投资金额的2%。<br/>
+                 7.红包金额累计扣除，不再区分具体哪个红包。<br/>
+                 8.红包有效期为3个月。<br/>
+                 9.红包分享后未领取失效有效期为3天。<br/>
+                 10.每个人获得的最多红包数量为30个。<br/>
+             </p>
+           </div>
+           <div style="margin-top:10px;">
+              <a class="btn btn-danger btn-block" ng-click="show()">分享朋友圈</a>
+           </div>
+       </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<!---->
+<div class="main-back02" style="position: absolute  ; top: 0px; left: 0px; z-index: 1; opacity: 0.8; width:100%; height: 100%; background:#bdbdbd;" ng-show="div_show" ng-click="hide()">
+
+ <div class="f-img00">
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</div>

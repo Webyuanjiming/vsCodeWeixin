@@ -1,0 +1,83 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>收益排名</span>
+</div>
+<div class="scrollable section">
+    <div class="scrollable-header">
+        <div class="top">
+            <div style="float:left;vertical-align:central; width:50%; margin-left:20px">
+                <div style="float:left; width:40%">
+                    <img ng-src="{{account.user.userHeadImage}}" alt="头像" class="head" />
+                </div>
+                <div style="float:right; width:60%; vertical-align:central;  padding-left:10px;  margin-top:35px;">
+                    <span class="text-center" style="font-weight:bold;color:white">{{account.user.nickName}}</span>
+                </div>
+            </div>
+
+            <div style="float: right; vertical-align: central; width: 40%;">
+                <div style="  color: white;width: auto;float: left;margin-top: 10px;margin-left: 25px;">
+                    <span style="font-size:10px">排名:</span>
+                    <span>{{account.rank}}</span>
+                    <a style="  width: 100%;color: #fff;float: left;" href="#/friendsrank">好友排名</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="scrollable-content" style="overflow: hidden;">
+        <span style="float: left;font-weight:bold;font-size:16px">最近10次回款</span>
+        <div style="width: 90%; margin-left: 5px; margin-right: 5px; height:auto; margin-top: 20px">
+            <div>
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="clearfix"> </div>
+        <span style="float: left; font-weight: bold; font-size: 16px">收益对比</span>
+        <table class="table-responsive" style="width:100%; height:35%;">
+            <tbody>
+                <tr>
+                    <td>
+                        <div style="margin:6px;">
+                            <div class="calcitem" style="float:left; background-color:#FF6F41; width:70%;font-size: 10px;color: #ffffff;  white-space: nowrap;min-height: 20px;">
+                               聚金资本
+                            </div>
+                            <div class="labelmoney" style="margin: 0;">
+                                <span>{{totalIntervest}}</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="margin: 6px;">
+                            <div class="calcitem" style="float: left; background-color: #9DD1FF; width: 25%;font-size: 10px;color: #ffffff;  white-space: nowrap;min-height: 20px;">
+                              货币基金
+                            </div>
+                            <div class="labelmoney" style="margin: 0;">
+                                <span>{{totalIntervest1}}</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="margin:6px">
+                            <div class="calcitem" style="float: left; background-color: #62BBFF; width: 6%;font-size: 10px;color: #ffffff;  white-space: nowrap; min-height: 20px;">
+                                银行活期
+                            </div>
+                            <div class="labelmoney" style="margin: 0;">
+                                <span>{{totalIntervest2}}</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div ui-content-for="modals">
+        <div ng-include="'/m/jujin/common.html'"></div>
+    </div>
+</div>

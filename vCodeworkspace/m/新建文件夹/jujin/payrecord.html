@@ -1,0 +1,40 @@
+<!--
+	时间：2015-04-27
+	描述：交易记录
+-->
+<style type="text/css">
+	td{
+		line-height: 1.42857143;
+		text-align: center;
+	}
+</style>
+<div ui-content-for="title">
+	<span>交易记录</span>
+</div>
+
+<div class="scrollable">
+	<div class="scrollable-content section">
+		<legend>交易记录</legend>
+		<div>
+			<table class="table table-hover table-condensed" ng-repeat="pay in pays" style="margin-bottom: 0;">
+				<tr>
+					<th colspan="3" style="background: #E4E4E4;">{{pay.date}}</th>
+				</tr>
+				<tr ng-repeat="data in pay.dataArray" >
+					<td style="width: 12%;">
+						<img src="{{data.logo}}" class="img-rounded"/>
+						<!--<img src="{{data.logo}}" class="img-circle">-->
+					</td>
+					<td>
+						{{data.paytype}}支付
+						<p class="text-muted h6">{{data.paydate}}</p>
+					</td>
+					<td>
+						{{data.amount}}
+						<p class="text-muted h6">{{data.success}}</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

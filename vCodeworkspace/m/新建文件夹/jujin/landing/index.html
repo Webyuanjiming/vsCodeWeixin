@@ -1,0 +1,311 @@
+﻿<div class="scrollable section" style="padding:0;">
+    <div class="scrollable-content" style="background-color:#B90820;">
+        <style>
+        @charset "utf-8";
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            border: none;
+            outline: none;
+        }
+        
+        a {
+            color: #444;
+            text-decoration: none;
+        }
+        
+        html,
+        body {
+            background-color: #FFF;
+            max-width: 460px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        
+        p,
+        span,
+        li,
+        a,
+        input {
+            font-family: '微软雅黑';
+        }
+        /*=======*/
+        
+        .sei_img_back01 {
+            position: absolute;
+        }
+        
+        section {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .box_z_index {
+             position: absolute;
+            top: 280px;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        #jm-user-reg-form-c>div#box_z_mall {
+            margin: 10px 10px;
+        }
+
+        .m-img0{width: 25px;height: 25px;margin-left: 10px;}
+        .div_input {
+            width: 100%;
+            background: #FFFFFF;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        
+        .text_box_in,
+        .text_box_ny,
+        .text_box_ou {
+            width: 90%;
+            border-bottom: 1px solid #CCCCCC;
+            margin: 0 5%;
+            line-height: 45px;
+        }
+        .text_box_title
+        {
+            width: 90%;
+            border-bottom: 1px solid #CCCCCC;
+            margin: 0 5%;
+            line-height: 45px;
+        }
+
+        
+        .text_box_ou {
+            border-bottom: 0px;
+        }
+        .text_box {
+            width: 80%;
+            margin-left: 5px;
+            color: #B6B4B6;
+        }
+        
+        .default {
+            color: #B6B4B6;
+            text-indent: .8em;
+        }
+        
+        .default_bu0 {
+            color: #B6B4B6;
+            font-weight: bold;
+        }
+        
+        .text_box_in span {
+            font-family: "微软雅黑";
+            font-size: 16px;
+            color: #B6B4B6;
+            margin-left: 40px;
+        }
+        
+        .input-sms-addon {
+            font-size: 12px;
+            font-family: "微软雅黑";
+            padding: .6em;
+            margin-left: 10px;
+            background: -webkit-linear-gradient(top, #045379, #2AA7D8, #34C1E0, #073D58, #0E4B69, #012F46);
+            background: -moz-linear-gradient(top, #045379, #2AA7D8, #34C1E0, #073D58, #0E4B69, #012F46);
+            background: -webkit-linear-gradient(top, #045379, #2AA7D8, #34C1E0, #073D58, #0E4B69, #012F46);
+            background: -o-linear-gradient(top, #045379, #2AA7D8, #34C1E0, #073D58, #0E4B69, #012F46);
+            background: linear-gradient(top, #045379, #2AA7D8, #34C1E0, #073D58, #0E4B69, #012F46);
+            filter: progid: DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#2CACD7, endColorstr=#043850);
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            color: #fff;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        
+        .text_box_ou .out-i {
+            width: 45%;
+            margin-left: 5px;
+        }
+        
+        .checks {
+            zoom: 1;
+            float: left;
+            margin: 25px 5px 20px 15px;
+        }
+        
+        .text_box_tt {
+            width: 90%;
+            margin: 0 5%;
+        }
+        
+        .text_box_tt span {
+            float: left;
+            width: 83%;
+            height: 40px;
+            line-height: 20px;
+            color: #FFF;
+            font-family: "微软雅黑";
+            font-size: 14px;
+            margin: 20px 0px;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+        
+        .text_box_button {
+            width: 90%;
+            margin: 0 5%;
+            text-align: center;
+        }
+        
+        .text_box_bu00 {
+            width: 80%;
+            margin-left: 5px;
+            height: 35px;
+            background-color: #FFF;
+            font-size: 16px;
+            font-family: "微软雅黑";
+        }
+        
+        .see_all {
+            position: absolute;
+            left: 50%;
+            bottom: 5%;
+            width: 20%;
+        }
+        
+        .see_all a {
+            background: #fff;
+            display: block;
+            height: 30px;
+            font-size: 14px;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            -o-box-pack: center;
+            box-pack: center;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -o-box-align: center;
+            box-align: center;
+            border-radius: 3px;
+            box-shadow: 0 5px 0 0 #e3e3e3;
+        }
+        .sei00
+        {
+            position: relative;
+            height: 100%;
+            top: 5%;
+        }
+        .sei-img00{
+            width: 85%;
+            margin: 20px auto;
+        }
+        .topic00{
+            width: 50%;margin: 20px auto;background: url("/m/dist/img/tg/topic.png");background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        </style>
+        <section>
+
+            <div class="sei_img_back01">
+                <img src="/m/dist/img/tg/b-ming0.jpg" style="width:100%;height:100%;" />
+            </div>
+            <div id="jm-user-reg-form-c" class="box_z_index">
+                <div id="box_z_mall">
+                    <div class="div_input">
+                        <p class="text_box_in">
+                            <img src="/m/dist/img/tg/ipa00.png" class="m-img0">
+                            <input class="text_box default" type="text" id="username" ng-model="reg.userName" placeholder="请输入手机号码" ng-focus="clearStatus()" required />
+                        </p>
+                        <p class="text_box_ny">
+                            <img src="/m/dist/img/tg/pwd0.png" class="m-img0">
+                            <input id="password" name="password" ng-focus="clearStatus()" ng-model="reg.pwd" class="text_box default" type="password" placeholder="请设置登录密码" maxlength="16" required />
+                        </p>
+                         <!--验证码-->
+                        <p class="text_box_ou" ng-if="validate" style="border-bottom: 1px solid #CCCCCC;">
+                            <img src="/m/dist/img/tg/lock00.png" class="m-img0">
+                            <input id="captcha" type="text" ng-model="reg.imgVerifyCode" placeholder="请输入验证码" name="captcha" required="" required-msg="验证码不可为空"  class="out-i default">
+                            <img id="captcha-img" class="ica_img" ng-src="{{validateStr}}" ng-click="drawImg()">
+                            <div class="msg-wrapper" style="display: none;"></div>
+                            <div class="msg-wrapper" ng-if="captchaerror">
+                                <p class="auth-msg auth-error">请输入验证码</p>
+                            </div>
+                        </p>
+
+                       
+
+                        <p class="text_box_ou">
+                            <img src="/m/dist/img/tg/lock00.png" class="m-img0">
+                            <input id="captcha" ng-model="reg.validateCode" type="tel" autocomplete="off" placeholder="验证码" ng-focus="clearStatus()" class="out-i default" required />
+                            <input type="button" id="jm-contract-btn" ng-click="getSmsCode()" style="border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;float: right; width: 35%;height: 30px;line-height: 20px;color: #FFF;text-indent: 0.2em;margin: 0.7em 0em 0em 0em;" value="获取验证码" />
+                        </p>
+
+                    </div>
+                    <div class="contact-c">
+                        <input id="jm-contract-agree" type="checkbox" name="jm-contract-agree" ng-init="reg.agree=true" ng-model="reg.agree" checked="checked" required="">
+                        <label for="jm-contract-agree" style="color:#fff">同意</label>
+                        <a href="/m/jujin/agreement/reg.html" target="_blank"   style="border-radius: 2px;background-color: #F1454A;color: #FFF;">注册协议</a>
+                        <a href="/m/jujin/agreement/agree.html" target="_blank"  style="border-radius: 2px;background-color: #F1454A;color: #FFF;">投资咨询与管理服务协议</a>
+                    </div>
+                    <div class="text_box_tt">
+                        <div class="msg-wrapper" ng-if="!reg.agree" style="float:left;">
+                            <p class="auth-msg auth-error" style="color: red; font-weight: bold; font-size: 14px">请同意以上协议</p>
+                        </div>
+                        <div class="msg-wrapper" ng-if="usernameerror" style="float:left;">
+                            <p class="auth-msg auth-error" style="color: red; font-weight: bold;font-size:14px">请输入手机号</p>
+                        </div>
+                        <div class="msg-wrapper" ng-if="validateCodeError" style="float:left;color:red;font-weight:bold">
+                            <p class="auth-msg auth-error" style="color: red; font-weight: bold; font-size: 14px">请输入验证码</p>
+                        </div>
+                        <div class="msg-wrapper" ng-if="pwdLengthError" style="float:left;color:red;font-weight:bold">
+                            <p class="auth-msg auth-error" style="color: red; font-weight: bold; font-size: 14px">密码长度不正确</p>
+                        </div>
+                        <div class="msg-wrapper" ng-if="pwdNotMatchError" style="float:left;color:red;font-weight:bold">
+                            <p class="auth-msg auth-error" style="color: red; font-weight: bold; font-size: 14px">两次输入的密码不一致</p>
+                        </div>
+                    </div>
+                    <p class="text_box_button">
+                        <button class="text_box_bu00 default_bu0" id="jm-submit-btn" ng-click="register()" role="button" aria-disabled="false" tabindex="0" aria-pressed="false" style="margin-top: 0.8em;color: #FFF;background-color: #F1454A;">注册领聚金币</button>
+                    </p>
+                    <div class="msg-wrapper" style="display: none;"></div>
+                    <div class="msg-wrapper" style="display: none;"></div>
+                    <div class="sei00">
+                        <div class="sei-img00">
+                            <img src="/m/dist/img/tg/bradius.png"/>
+                        </div>
+                        <p style="color: #ffd824;font-size: 18px;text-align: center;">聚金资本2016跨年暖冬活动</p>
+                        <div class="topic00">
+                            <p style="color: #b90820;font-size: 18px;line-height: 22px;text-align: center;">活动详情</p>
+                        </div>
+                        <p style="color: #FFF;font-size: 16px;line-height: 22px;">
+                        聚金资本推出2016跨年暖冬活动，回馈新老客户。
+                        <br/>
+                        最好的奖品，最稳定的收益，都在聚金资本。</p>
+                        <p style="color: #ffea00;font-size: 16px;line-height: 22px;font-weight: bolder;margin-top: 20px;">活动一：新用户注册奖</p>
+                        <p style="color: #FFF;font-size: 16px;line-height: 22px;">注册聚金资本新用户、实名认证即送68元聚金币。</p>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div ui-content-for="modals">
+            <div ng-include="'/m/jujin/common.html'"></div>
+        </div>
+    </div>
+</div>

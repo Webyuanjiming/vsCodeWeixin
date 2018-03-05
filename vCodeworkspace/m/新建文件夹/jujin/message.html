@@ -1,0 +1,28 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>我的消息</span>
+</div>
+<div class="scrollable">
+
+    <div class="scrollable-content">
+        <div id="jm-projects">
+            <!--列表-->
+            <a ng-repeat="item in messages" href="" class="list-group-item">
+                <div>
+                    <div><span style="float:left">{{item.fromNickName}}</span><span style="float:right">{{item.sendTime}}</span> </div><br />
+                    <span style="margin-top: 5px;  margin-bottom: 5px; font-weight:bold">标题:{{item.title}}</span><br />
+                    <div ng-bind-html="item.content" style="font-size:11px"></div><br />
+                </div>
+            </a>
+            <div ng-if="currentPage<totalPageCount" class="more" ng-click="loadMore()">加载更多项目</div>
+        </div>
+
+
+
+        <div ui-content-for="modals">
+            <div ng-include="'/m/jujin/common.html'"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="width100">
+    <div class="fn-clear p10">
+        <div class="main_title_define">
+            <span ng-bind="title"></span>
+        </div>
+        <ul class="news_define">
+            <li ng-repeat="item in list">
+                <div>
+                    <a href="javascript:void(0)" ng-href="#/detail?artId={{item.articleId}}">
+                        <span class="arttitle">{{item.articleTitle}}</span>
+                    </a>
+                </div>
+                <p class="all-def">
+                    <span class="authoricon"></span><span class="person">{{item.hits}}</span>
+                    <span class="datetime">{{item.publishTime}}</span><span class="dateicon"></span>
+                </p>
+            </li>
+        </ul>        
+    </div>
+    <input type="button" class="loadmore" ng-show="showMore" value="加载更多" ng-click="loadMore();"></input>
+</div>

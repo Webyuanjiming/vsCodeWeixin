@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript原生测试</title>
+</head>
+<body>
+	
+<a href="jsbridge://gotoBorrow?params={"\borrowId\":\"2015060800000000000000001398\",\"type\":\"7\",\"flag\":\"B\"}">参数形式跳转</a><br/>
+
+
+ <a href="jsbridge://gotoViewImage?params={\"url\":\"https://www.jujinziben.com/web_upload/images/20160418/he/shouya.jpg\"}">显示大图</a><br/>
+
+<a href="jsbridge://gotoSign">跳转签到</a>
+
+
+<p>
+
+<span>双向调用</span><br/>
+
+<a href="jsbridge://gotoSign">跳转签到</a><br/>
+
+
+
+
+<!--事件跳转--><br/>
+<a onclick="jsbridge.gotoBorrow(borrowId,type,flag)" >跳转聚金优选</a><br/>
+<a onclick="jsbridge://gotoViewImage(\"https://www.jujinziben.com/web_upload/images/20160418/he/shouya.jpg\")"><br/>显示大图</a>
+<a onclick="jsbridge.gotoSign()" >跳转签到</a><br/>
+
+
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* Create by w8 2015/11/5 morning. */
+/*
+* author: YuanJiMing
+* all cs is control is here!
+* signIn is erveryday sign here 《HTML》!
+* Time:Nine twenty three five!
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body {
+    overflow: hidden;
+    width: 100%;
+    font-family: Hiragino Sans GB, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #878787;
+    -webkit-touch-callout: inherit;
+    -webkit-user-select: auto;
+    background-color: #ED7C42;
+}
+
+.page-1 {
+    background-image: url(../img/dd2_02.png);
+}
+.page {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /*height: 100%;*/
+    /*position: absolute;*/
+    text-align: center;
+}
+.page-current {
+    z-index: 1;
+}
+
+.jinbi0
+{
+    /*position: absolute;
+    top:5%;*/
+    width: 100%;
+    /*height: 100%;
+    overflow: auto;*/
+    text-align:center;
+    padding-top: 1em;
+}
+
+.jinbi0 img
+{
+    position: relative;
+    width: 40%;
+    top:0;
+}
+
+.btn_5
+{
+    position: relative;
+    width: 40%;
+    top:0;
+    background-color: #FFFFFF;
+    color: #A85426;
+    border: 1px solid #FFF;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    height: 35px;
+    box-shadow: 3px 3px 3px #843A15;
+}
+
+.ding_5
+{
+    margin: 0 1.0em;
+    height: 16px;
+}
+
+.ding_5 ul
+{
+    display:-moz-box;
+    display:-webkit-box;
+    display:box;
+    height: 100%;
+    background-color: #B04A0E;
+}
+
+.ding_5 ul li
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+    list-style-type: none;
+    background-color: #BF541C;
+    margin: 0 0.05em;
+    position: relative;
+}
+
+.baopen5
+{
+    background-image: url(../img/qqdd_05.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 3.0em;
+    height: 3.0em;
+    position: absolute;
+    right: -0.8em;
+    top: -0.8em;
+    text-align: center;
+}
+
+.ding_5_color
+{
+    background-color: #ECDF4D;
+    width: 100%;
+    height: 16px;
+}
+
+.signIn_text
+{
+    /*position: absolute;*/
+    width: 100%;
+    text-align:center;
+}
+
+.border_color5
+{
+    background-color: #BE6336;
+    margin: 1.0em 1.0em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.border_color5 p
+{
+    padding: 0.2em 0;
+    text-align: left;
+    margin-left: 0.5em;
+    color: #FFF;
+}
+
+/*签到明细*/
+.div_th {
+  padding: 0 15px 0 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: box;
+  margin: 0 10px 10px 10px;
+  background: #ebebeb;
+  border-radius: 5px;
+  height: 30px;
+}
+.div_th_od {
+  width: 30px;
+  padding: 5px 0 0 5px;
+}
+
+.div_th_td {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: box;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+}
+
+.div_th_th p {
+  line-height: 30px;
+  color: #ff7c8a;
+}
+
+.div_th_td p {
+  line-height: 30px;
+  color: #999999;
+}
+
+.more {
+  color: #009afc;
+  text-align: center;
+  margin: 36px;
+}
+
+#jm-touch {
+  top:6%;
+  overflow: auto;
+  margin: auto;
+}
+
+.list
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}

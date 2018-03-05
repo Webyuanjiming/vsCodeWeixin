@@ -1,0 +1,1 @@
+var basepath = "http://m.jujinziben.com";

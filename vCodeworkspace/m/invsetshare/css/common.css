@@ -1,0 +1,225 @@
+html{font-size: 625%;max-width: 640px;}
+body{max-width: 640px;font-family:"Microsoft YaHei";font-size: 0.12rem;padding: 0;margin: 0;}
+a,input,button{ outline:none; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+::-moz-focus-inner{border:0px;}
+/******************好友分享********************/
+.body-background{
+	background: url("../images/background.png") no-repeat;
+	background-size: 100%;
+	background-color: #f5c647;
+}
+.banner1{width: 90%;margin: 17.5% 5% 4%;}
+.content{text-align: center;}
+.award{color:#feffaf;font-weight: 700;font-size: 0.22rem;margin: 0;}
+.info1{font-size: 0.16rem;color: #e20737;margin-top: 35px;margin-bottom: 0;}
+.info1 span{font-size: 0.26rem;padding: 0 5px;}
+.info3{font-size: 0.16rem;color: #e20737;display: none;}
+.info2{color: #e20737;margin-top: 5px;}
+.info2 span{font-size: 0.16rem;}
+input.ipt{
+	width: 60%;
+	height: 40px;
+    line-height: 40px;
+    border: none;
+    margin: 0;
+    padding: 0 0;
+    text-align: center;
+    font-size: 0.16rem;
+}
+.ipt-btn{
+	background-color: #fe5427;
+    font-size: 0.16rem;
+    color: #ffffff;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    width: 20%;
+    margin: 0 -5px;
+    padding: 0;
+    vertical-align: top;
+}
+.btn{
+	background: url("../images/btn.png") no-repeat;
+    width: 100%;
+    display: inline-block;
+    height: 60px;
+    background-size: 100%;
+    font-size: 0.16rem;
+    color: #ffffff;
+    vertical-align: middle;
+    padding-top: 4%;
+    text-decoration: none;
+}
+.w80{width: 80%;margin: 0 auto;padding-left: 5px;margin-top: 70px;}
+/******************注册页面*********************/
+.register-body{
+    background-color: #783084;
+}
+.reg-logo{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 13%;
+}
+.reg-cont{
+    list-style: none;
+    padding: 0 0;
+    margin: 0 0;
+}
+.reg-cont li{
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
+}
+.reg-cont input.ipt{
+    width: 100%;
+    border-radius: 6px;
+    text-align: left;
+    padding-left: 80px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.code-btn{
+    color: #ffffff;
+    background-color: #ff2841;
+    height: 40px;
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    float: right;
+}
+.w68{
+    width: 68% !important;
+}
+.label{
+    position: absolute;
+    top: 12px;
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+    left: 0;
+    color: #666666;
+}
+.register-body .btn{
+    text-align: center;
+    background: url("../images/reg-btn.png") no-repeat;
+    background-size: 100%;
+}
+.register-body .w80{
+    margin-top: 20px;
+}
+.default-radio.checked-radio-blue{
+    background-image: url("../images/radio-blue.png");
+}
+.radio-blue{
+    float: left;
+    margin-right: 2px;
+}
+.radio-blue .default-radio{
+    vertical-align: top;
+    margin-right: 8px;
+}
+.default-radio{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    background: url('../images/default-radio.png');
+    background-size: 18px;
+}
+.reg-agreement{
+    color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    z-index: 2;
+    margin-top: -15px;
+}
+.reg-agreement a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.bottom{
+    color: #ffffff;
+    font-size: 0.11rem;
+    text-align: center;
+    margin: 6px 0;
+}
+.reg-login{
+    text-align: center;
+    margin: 6px 0 30px;
+}
+.reg-login span{
+    color: #ff2841;
+    margin-right: 5px;
+}
+.reg-login a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.ica_img{
+    vertical-align: middle;
+    width: 25%;
+    margin-left: 4%;
+}
+/*弹框*/
+.jj-model-window{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(93, 93, 95, 0.709804);
+}
+.jj-model-content{
+    background-color: #FFFFFF;
+    position:absolute;
+    top:40%;
+    left: 3%;
+    width:94%;
+    border-radius: 4px;
+    font-size: 0.16rem;
+}
+.jj-model-body{
+    position: relative;
+    padding: 15px;
+}
+.jj-model-header{
+    border-bottom: 1px solid #d3d8dc;
+    padding: 10px;
+    position: relative;
+}
+.jj-model-header .close{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 28px;
+}
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20)
+}
+.jj-model-header .title{
+    text-align: center;
+    margin: 0 0; 
+}
+.text-center{
+    text-align: center !important;
+}

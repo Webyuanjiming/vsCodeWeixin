@@ -1,0 +1,115 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>聚金宝明细</span>
+</div>
+<div class="scrollable" style="background-color:#fff">
+    <div class="scrollable-content">
+        <!--<aside class="div_od">
+            <div class="div_od_od">
+                <p>累计收益(元)</p>
+            </div>
+            <div class="div_od_od">
+                <span>￥{{entity.interestAmount}}</span>
+            </div>
+        </aside>-->
+        <!--1-->
+        <!--<aside class="div_th" >
+            <div class="div_th_od">
+                <img src="img/c.png" alt="">
+            </div>
+            <div class="div_th_td">
+                <div class="div_th_td">
+                    <p>{{item.compressDate}}</p>
+                </div>
+                <div class="div_th_th">
+                    <p>+{{item.amount}}</p>
+                </div>
+            </div>
+        </aside>-->
+        <div id="jm-touch">
+            <div class="project-detail jm-tab">
+                <div class="name">
+                    <div class="clearfix"></div>
+                    <ui-state id='activeTab' default='1'></ui-state>
+                    <div class="btn-group justified nav-tabs">
+                        <a ui-set="{'activeTab': 1}" class="btn btn-default" ui-turn-on='button1' ui-state='button1' ui-default='button1=true' ui-class="{'active': button1}" ui-exclusion-group='myButtons'>资金明细</a>
+                        <a ui-set="{'activeTab': 2}" class="btn btn-default" ui-turn-on='button2' ui-state='button2' ui-class="{'active': button2}" ui-exclusion-group='myButtons' ng-click="hideAccount()">实持债权</a>
+                    </div>
+                    <div class="bd" ui-if="activeTab == 1">
+                        <div id="jm-investments" class="jm-tab" >
+                            <div class="bd">
+                                <div class="projects">
+                                    <div class="recove" style="height:auto">
+                                        <div class="amounts box">
+                                            <div class="amount" style="width:30%">
+                                                <span class="label">日期</span>
+                                            </div>
+                                            <div class="amount" style="width:30%">
+                                                <span class="label">操作类型</span>
+                                            </div>
+                                            <div class="amount" style="width:40%">
+                                                <span class="label">金额（元）</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="amounts box" ng-repeat="item in details">
+                                            <div class="amount" style="width:30%">
+                                                <span style="text-align:center">{{item.compressDate}}</span>
+                                            </div>
+                                            <div class="amount" style="width:30%"><span style="text-align:center">{{item.bpMemo}}</span></div>
+                                            <div class="amount" style="width:40%">
+                                                <span style="text-align:center">{{item.bpFlg==1?'-':'+'}}{{item.amount}}</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                         <div class="clearfix"></div>
+                                        <div ng-if="currentDetailPage<totalDetailPage" class="more" ng-click="loadDetailMore()">加载更多资金明细</div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bd" ui-if="activeTab == 2">
+                      <div id="jm-investments" class="jm-tab" >
+                            <div class="bd">
+                                <div class="projects">
+                                    <div class="recove" style="height:auto">
+                                        <div class="amounts box">
+                                            <div class="amount" style="width:60%">
+                                                <span class="label">项目名称</span>
+                                            </div>
+                                            <div class="amount" style="width:30%">
+                                                <span class="label">债权金额（元）</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="amounts box" ng-repeat="item in zhaiquans">
+                                            <div class="amount" style="width:60%">
+                                                <span style="text-align:left">{{item.borrowTtile}}</span>
+                                            </div>
+                                            <div class="amount" style="width:30%"><span style="text-align:left">{{item.validAccountTender}}</span></div>
+                                            
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                        <div ng-if="currentZhaiQuanPage<totalZhaiQuanPage" class="more" ng-click="loadZhaiQuanMore()">加载更多债权</div>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

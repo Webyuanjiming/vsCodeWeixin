@@ -1,0 +1,342 @@
+/*
+*@author:WebYuanJiMing
+*@Create by w8 on date 16/08/10
+*@title:jujinziben.com=data
+*@Morning
+*@page:data
+*/
+@charset "UTF-8";
+*{border:0;padding: 0;margin:0;}
+
+.data{width: 100%;}
+/*--f-right--*/
+.f-right{
+    margin-left: 0.1em;
+    margin-right: 1.8em;
+}
+
+.data .box{width: 100%;border: 1px solid #e6e6e6;}
+.prent1200{min-width: 85%;}
+.box {box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);}
+.float-left{float: left;}
+@media only screen and (min-height: 0){
+    .box{
+        background: #fff;
+        padding: 0.5em 0.8em;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.07);
+        border-radius: 5px;
+        position: relative;
+    }
+}
+
+.box-title {
+    font-size:0.8em;
+    color: #333333;
+    height:1.5em;
+    line-height:1.0em;
+    font-weight: bold;
+    border-bottom: 1px solid #DEDEDE;
+    position: relative;
+}
+.actions {
+    float: right;
+    font-weight: normal;
+}
+.font_size13 {
+    font-size:0.75em;
+    line-height: 1.0em;
+}
+.fcolor_gray2 {
+    color: #7f899a;
+}
+
+.fcolor_red {
+    color: #F72C2C;
+}
+
+
+/*-头部内容-*/
+.data ul li {
+    float: left;
+    list-style: none;
+    width:50%;
+    text-align: center;
+    padding: 0.5em 0 0.3em 0;
+}
+.font_fz {
+    font-family: sans-serif;
+    font-size:1.1em;
+    overflow: hidden;
+}
+.fcolor_black2 {
+    color: #343f50;
+}
+.data ul li span {
+    font-size:0.75em;
+    color: #474e5d;
+    font-family: "微软雅黑";
+}
+div.fcolor_black2 {
+    width:100%;
+    float: left;
+    font-weight: normal;
+    padding: 10px 0;
+}
+.font_size14 {
+    font-size:0.85em;
+    font-family: "Microsoft YaHei";
+}
+h2{
+    font-size: 0.85em;
+    position: relative;
+    top: 1.0em;
+}
+.tom20{
+    margin-bottom: 2.0em;
+}
+/*-sect-*/
+.sect{outline:none;height:1.5em;border: 1px solid #DEDEDE;border-radius: 3px;-moz-border-radius: 3px;-webkit-border-radius: 3px;margin-top: -10px;}
+.sect option{font-family: "微软雅黑";font-size:0.75em;color: #333;line-height: 1.5em;}
+
+.act{float: right;font-weight: normal;}
+
+.acc-list{
+    width: 100%;
+    float: left;
+    border-top: 1px solid #E7E7E7;
+}
+.acc-list ul li{
+    float: left;
+    width: 100%;
+    list-style: none;
+}
+.rey-list ul li {
+    float: left;
+    list-style: none;
+    width: 100%;
+}
+.rey-box {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #E7E7E7;
+    background-color: #FFFFFF;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+.rey-pref0 {
+    width: 98%;
+    height: 3.0em;
+    line-height: 3.0em;
+    margin: 0 auto;
+    border-bottom: 1px dashed #CCCCCC;
+}
+.rey0-lt {
+    width: 60%;
+    height: 100%;
+    color: #1A1A1A;
+    font-family: 'SimHei';
+    line-height: 3.0em;
+    font-size: 0.75em;
+    float: left;
+    text-align: left;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.rey0-gt {
+    width: 40%;
+    height: 100%;
+    float: right;
+    color: #999;
+    font-size: 0.75em;
+    line-height: 3.0em;
+    font-family: 'SimHei';
+}
+.rey-total {
+    width:100%;
+    margin: 0 auto;
+    color: #999;
+    font-size: 0.75em;
+    line-height: 2.0em;
+    font-family: 'SimHei';
+    text-align: left;
+    text-indent: 13px;
+}
+.rey-person, .rey-mo {
+    width: 90%;
+    margin: 0 auto;
+}
+.repson-lt {
+    float: left;
+    width: 50%;
+    text-align: left;
+    color: #F81515;
+    font-size: 0.75em;
+    line-height: 2.0em;
+    font-family: 'SimHei';
+}
+.repson-gt {
+    float: right;
+    width: 50%;
+    text-align: right;
+    color: #F81515;
+    font-size: 0.75em;
+    line-height: 2.0em;
+    font-family: 'SimHei';
+}
+.remo-lt {
+    width: 50%;
+    float: left;
+    color: #999;
+    font-weight: bolder;
+    font-size: 0.65em;
+    line-height: 2.0em;
+    font-family: 'SimHei';
+    text-align: left;
+}
+.remo-gt {
+    width: 50%;
+    float: right;
+    color: #999;
+    font-weight: bolder;
+    font-size: 0.65em;
+    line-height: 2.0em;
+    font-family: 'SimHei';
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mx300{
+    height: 300px;
+}
+.mx430{
+    height: 460px;
+}
+
+.mx730{
+    height:420px;
+}
+/**/
+#touzitongji ul li{
+    float: left;
+    list-style: none;
+    width:50%;
+    padding: 0.5em 0 0.3em 0;
+    text-align: center;
+}
+
+
+.show-y{
+    width:100%;
+    height:2.0em;
+    background: rgba(237,35,47,.9);
+    position: fixed;
+    bottom: 0px;
+    right:0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    color: #FFF;
+    padding: 5px;
+    line-height:2.5em;
+    font-size:1.0em;
+    font-family: "微软雅黑";
+}
+
+.x-cort{
+    border: 1px dashed #f6a7ae;
+    height:2.0em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.x-cort ul li{
+    float: left;
+    list-style: none;
+    width:25%;
+    padding: 0;
+    margin:0;
+}
+.x-cort ul li p{
+    color: #FFF;
+    font-size:0.75em;
+    line-height:2.5em;
+    width: 100%;
+    float: left;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "微软雅黑";
+}
+.x-cort-list{
+    display: none;
+    opacity: 0;
+}
+.x-cort-list{
+    width:100%;
+    position: absolute;
+    left:0;
+    border-radius: 3px 3px 0 0;
+    bottom:2.5em;
+    background-color: #434c5b;
+    background-color: rgba(47,57,73,.95);
+    padding:5px;
+    white-space: normal;
+    opacity: 1;
+}
+
+.x-cort-list ul li{
+    float: left;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.x-cort-div{
+    width: 100%;
+    float: left;
+    height: 44px;
+}
+.x-cort-div ul li{
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin:0;
+}
+.x-cort-div ul li p{
+    color: #FFF;
+    font-size:0.75em;
+    line-height:2.0em;
+    border-bottom: 1px dashed #CCC;
+    width: 100%;
+    float: left;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "微软雅黑";
+}
