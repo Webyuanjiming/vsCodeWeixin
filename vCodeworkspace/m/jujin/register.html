@@ -1,0 +1,58 @@
+﻿<div ui-content-for="title">
+    <span>聚金资本注册</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section">
+        <form name="rForm" novalidate="novalidate">
+            <ul class="form-ul form-ul-vertical form-ul-noborder">
+                <li>
+                    <span class="ul-label">手机号码</span>
+                    <input type="text" ng-readonly="usread" placeholder="请输入手机号码" class="place-text" ng-model="reg.userName" required/>
+                </li>
+                <li>
+                    <span class="ul-label">设置密码</span>
+                    <input name="password" ng-model="reg.pwd" type="password" maxLength="16" class="place-text" placeholder="请输入6-16位密码" required>
+                </li>
+                <li>
+                    <span class="ul-label">确认密码</span>
+                    <input type="password" class="place-text" maxLength="16" ng-model="repsw" placeholder="请再次输入密码" required/>
+                </li>
+                <li ng-if="showRecomm">
+                    <input name="recommendPhone" style="width: 100%;" ng-model="reg.invite" class="place-text" type="text" placeholder="推荐人手机或推荐人用户名(选填)">
+                </li>
+                <li>
+                    <input type="text" maxLength="6" placeholder="手机验证码" class="place-text" ng-model="reg.validateCode" required/>
+                    <div class="r0">
+                        <button class="btn btn_blue_s" ng-class="{false: 'inactive'}[disable]"  ng-click="getSmsCode()" >{{btnmsg}}</button>
+                    </div>
+                </li>
+                <li ng-if="validate">
+                    <input type="text" ng-model="reg.imgVerifyCode" placeholder="请输入验证码" name="captcha" required class="place-text">
+                    <div class="r0 w70">
+                        <img id="captcha-img" class="ica_img" ng-src="{{validateStr}}" ng-click="drawImg()">
+                    </div>
+                </li>
+            </ul>
+            <div class="reg-contact-c">
+                <div class="radio-blue">
+                    <span class="public-icon" ng-click="agree();" ng-class="{true: 'checked-radio-blue',false:'default-radio'}[reg.agree]" ></span>
+                    <span>同意</span>
+                </div>
+                <a href="/m/jujin/agreement/reg.html" target="_blank" class="view-btn">注册协议</a>
+                <a href="/m/jujin/agreement/risk.html" target="_blank" class="view-btn">投资风险提示</a>
+            </div>
+            <div class="form-radio-bd">
+                <button type="submit" class="btn form-vertival-submit" ng-disabled="rForm.$invalid && !loading" ng-click="register()">
+                    注册
+                </button>
+            </div>
+        </form>
+        <div class="reg-login-c">
+            <span>已有账号?</span>
+            <a href="#/login">登录</a>
+        </div>
+    </div>
+    <div ui-content-for="modals">
+        <div ng-include="'/m/jujin/common.html'"></div>
+    </div>
+</div>

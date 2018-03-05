@@ -1,0 +1,206 @@
+﻿<div ui-content-for="back">
+
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+
+</div>
+
+<div ui-content-for="title">
+
+    <span>账户设置</span>
+
+</div>
+
+<div class="scrollable">
+
+    <div class="scrollable-content">
+
+        <!--开始-->
+
+       <section class="">
+
+            <aside class="as_0">			
+
+			  <div class="shezhi_01">
+
+                    <a href="#/invite" class="shezhi_div_tddv">
+
+                        <div class="shezhi_div_tddvt">
+
+                            <p>邀请管理</p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvh">
+
+                            <p></p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvf">
+
+                            <img src="img/yu.png" alt="">
+
+                        </div>
+
+                    </a>
+
+                </div>							
+
+                <div class="shezhi_01">
+
+<!--                    <a href="#/attest" class="shezhi_div_tddv">-->
+                  <div class="shezhi_div_tddv" style="cursor:pointer;" ng-click="skipPerson()">
+                       <form action="https://1.192.127.106:9902/mobileAccountManage/signClient.do?_input_charset=utf-8" method="post" class="frm">
+                           <input type="hidden" name="COMMONVAL" value="{{clientStatus.COMMONVAL}}" />
+                           <input type="submit" id="renzheng" value="" style="margin-top: -3px;width: 100%;height: 100%;display: none;"/>
+                        </form>
+                        <div class="shezhi_div_tddvt">
+
+                            <p>认证中心</p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvh">
+
+                            <p></p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvf">
+
+                            <img src="img/yu.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="shezhi_01">
+                    <a href="#/authorize" class="shezhi_div_tddv">
+                        <div class="shezhi_div_tddvt">
+                            <p>业务授权</p>
+                        </div>
+                        <div class="shezhi_div_tddvh">
+                            <p></p>
+                        </div>
+                        <div class="shezhi_div_tddvf">
+                            <img src="img/yu.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="shezhi_01">
+                    <a href="#/vip" class="shezhi_div_tddv">
+                        <div class="shezhi_div_tddvt">
+                            <p>VIP管理</p>
+                        </div>
+                        <div class="shezhi_div_tddvh">
+                            <p></p>
+                        </div>
+                        <div class="shezhi_div_tddvf">
+                            <img src="img/yu.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="shezhi_01">
+
+                    <div class="shezhi_div_tddv" style="cursor:pointer;" ng-click="skipCard()">
+                        <form action="https://1.192.127.106:9902/mobileAccountManage/signClient.do?_input_charset=utf-8" method="post" class="frm">
+                            <input type="hidden" name="COMMONVAL" value="{{bankStatus.COMMONVAL}}" />
+                            <input type="submit" id="sig" value="" style="margin-top: -3px;width: 100%;height: 100%;display: none;"/>
+                        </form>
+                        <!--<a href="#/bankcard" class="shezhi_div_tddv">-->
+                        <div class="shezhi_div_tddvt">
+
+                            <p>绑定银行卡</p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvh">
+
+                            <p></p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvf">
+
+                            <img src="img/yu.png" alt="">
+
+                        </div>
+                      <!--  </form>-->
+                    </div>
+
+                </div>
+                <div class="shezhi_01">
+
+                    <a href="#/changepsw" class="shezhi_div_tddv">
+
+                        <div class="shezhi_div_tddvt">
+
+                            <p>修改密码</p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvh">
+
+                            <p></p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvf">
+
+                            <img src="img/yu.png" alt="">
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="shezhi_01">
+
+                    <a href="#/findpsw" class="shezhi_div_tddv">
+
+                        <div class="shezhi_div_tddvt">
+
+                            <p>找回登录密码</p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvh">
+
+                            <p></p>
+
+                        </div>
+
+                        <div class="shezhi_div_tddvf">
+
+                            <img src="img/yu.png" alt="">
+
+                        </div>
+
+                    </a>
+
+                </div>
+                
+                <div class="logout">
+                    <a ng-click="logout();">
+                        <p>退出登录</p>
+                    </a>
+                </div>
+
+            </aside>
+
+        </section> 
+
+        <!--结束-->
+
+    </div>
+
+    <div ui-content-for="modals">
+
+        <div ng-include="'/m/jujin/common.html'"></div>
+
+    </div>
+
+</div>
+

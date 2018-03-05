@@ -1,0 +1,98 @@
+<div ng-controller="ReportCtrl as report">
+    <a href="javascript:void(0);" class="refresh" ng-click="refreshReport();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <div class=mr>
+                    <label class="font-x  px-i0">用户名:</label> <input
+                        class="emb form-control" name="用户名" ng-model="userId" />
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x  px-i0">手机号:</label> <input
+                        class="emb form-control" name="手机号" ng-model="mobile" />
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x px-i0">开始时间:</label> <a href="javascript:void(0)" ng-click="calendarClick($event);">
+                        <input readonly="readonly" class="editbox4 form-control" value=""
+                        size="12" name="txtContinueDateFrom" ng-model="startDate"
+                        onchange="CheckInputText(this);return false;"
+                        onkeydown="if (event.keyCode == 13) return false;" />
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x px-i0">结束时间:</label><a href="javascript:void(0)" ng-click="calendarClick($event);">
+                        <input readonly="readonly" class="editbox4 form-control" value="" size="12"
+                        name="txtContinueDateFrom" ng-model="endDate"
+                        onchange="CheckInputText(this);return false;"
+                        onkeydown="if (event.keyCode == 13) return false;" /></a>
+                </div>
+            </li>
+            <li><div class="mr">
+                    <label class="font-x  px-i0">渠道:</label>
+                    <select class="emb form-control" ng-model="channel">
+                        <option value="BSY">比搜益</option>
+                        <option value="WDTY">网贷天眼</option>
+                        <option value="RRL">人人利</option>
+                        <option value="WDZTC">网贷直通车</option>
+                        <option value="RRT">人人投</option>
+                        <option value="YMTS">玉米投手</option>
+                        <option value="xglc">西瓜理财</option>
+                    </select>
+                </div></li>
+        </ul>
+        <div class="queryBtns">
+            <button class="eii btn btn-primary"
+                ng-click="queryData();">查询</button>
+            <button class="eii btn btn-primary"
+                ng-click="exportData();">导出</button>
+        </div>
+    </div>
+    <div class="reportCont">
+        <h3 class="title">渠道流量统计报表</h3>
+        <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+        <table ng-table="report.tableParams" class="reportTable table-striped table table-bordered">
+            <!--<thead>
+                <tr>
+                    <th sortable="'MOBILE'">手机号</th>
+                    <th>用户名</th>
+                    <th>真实姓名</th>
+                    <th>总投资金额</th>
+                    <th>注册时间</th>
+                    <th>渠道</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in list">
+                    <td sortable="'MOBILE'">{{item.MOBILE}}</td>
+                    <td>{{item.USERID}}</td>
+                    <td>{{item.REALNAME}}</td>
+                    <td>{{item.TENDACCOUNT}}</td>
+                    <td>{{item.INSDATE}}</td>
+                    <td ng-if="item.CHANNEL.rowflag && item.CHANNEL.rownum > 1" rowspan={{item.CHANNEL.rownum}}>{{item.CHANNEL.value}}</td>
+                    <td ng-if="!item.CHANNEL.rowflag && item.CHANNEL.rownum > 1" ng-show={{item.CHANNEL.rowflag}}>{{item.CHANNEL.value}}</td>
+                    <td ng-if="item.CHANNEL.rowflag == undefined">{{item.CHANNEL.value}}</td>
+                </tr>
+            </tbody>-->
+            <tr ng-repeat="item in list">
+                <td data-title="'手机号'">{{item.MOBILE}}</td>
+                <td data-title="'用户名'" >{{item.USERID}}</td>
+                <!--<td data-title="'真实姓名'" sortable="'REALNAME'">{{item.REALNAME}}</td>-->
+                <td  data-title="'真实姓名'" ng-if="item.REALNAME.rowflag && item.REALNAME.rownum > 1" rowspan={{item.REALNAME.rownum}}>{{item.REALNAME.value}}</td>
+                <td  data-title="'真实姓名'" ng-if="!item.REALNAME.rowflag && item.REALNAME.rownum > 1" ng-show={{item.REALNAME.rowflag}}>{{item.REALNAME.value}}</td>
+                <td  data-title="'真实姓名'" ng-if="item.REALNAME.rowflag == undefined">{{item.REALNAME.value}}</td>
+                <td  data-title="'总投资金额'" sortable="'TENDACCOUNT'">{{item.TENDACCOUNT}}</td>
+                <td  data-title="'注册时间'" sortable="'INSDATE'">{{item.INSDATE}}</td>
+                <td  data-title="'渠道'" sortable="'CHANNEL'" ng-if="item.CHANNEL.rowflag && item.CHANNEL.rownum > 1" rowspan={{item.CHANNEL.rownum}}>{{item.CHANNEL.value}}</td>
+                <td  data-title="'渠道'" sortable="'CHANNEL'" ng-if="!item.CHANNEL.rowflag && item.CHANNEL.rownum > 1" ng-show={{item.CHANNEL.rowflag}}>{{item.CHANNEL.value}}</td>
+                <td  data-title="'渠道'" sortable="'CHANNEL'" ng-if="item.CHANNEL.rowflag == undefined">{{item.CHANNEL.value}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

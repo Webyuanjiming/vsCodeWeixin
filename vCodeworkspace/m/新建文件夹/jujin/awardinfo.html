@@ -1,0 +1,56 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>中奖明细</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section">
+
+        <div id="jm-investments" class="jm-tab">
+            <div class="bd">
+                <div ng-if="records" class="projects">
+                    <div class="recove">
+                        <div class="tit box">
+                            <span></span>
+                        </div>
+                        <div class="amounts box">
+                            <div class="amount" style="width:33%">
+                                <span class="label">日期</span>
+                            </div>
+                            <div class="amount" style="width:33%">
+                                <span class="label">奖品信息</span>
+                            </div>
+                            <div class="amount" style="width:33%">
+                                <span class="label">领取状态</span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="amounts box" ng-repeat="record in  records">
+                            <div class="amount" style="width:33%">
+                                <span style="text-align:center">{{record.winDate}}</span>
+                            </div>
+
+                            <div class="amount" style="width:33%"><span style="text-align: center;">{{record.awardName}}</span></div>
+                            <div class="amount" style="width:33%">
+                                <span style="text-align:center" class="{{record.isGain==0?'type':'Principal'}}"><span style="text-align:center">{{record.isGain==1?'已发放':'未发放'}}</span></span>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                    <div ng-if="currentPage<totalPageCount" class="more" ng-click="loadMore()" style="margin-top:30px">加载更多中奖信息</div>
+                </div>
+
+                <div ng-if="!records" class="uninvested">
+                    <div class="prompt">暂无中奖信息</div>
+                </div>
+
+            </div><br>
+        </div>
+
+        <div ui-content-for="modals">
+            <div ng-include="'/m/jujin/common.html'"></div>
+        </div>
+    </div>
+</div>

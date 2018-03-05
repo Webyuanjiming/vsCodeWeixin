@@ -1,0 +1,54 @@
+<div class="scrollable inviteFriends">
+    <div class="scrollable-content section">
+        <div class="invitebd">
+            <div class="scrolltop">
+                <div class="view">
+                    <span class="scolicon"></span>
+                    <span class="scolinfo">下拉查看邀请码</span>
+                </div>
+            </div>
+            <div id="jm-investments" class="jm-tab" ng-init="loadInvites()">
+                <div class="bd">
+				    <div class="inviteno" ng-if="!invites || invites.length == 0">
+						<span>您还没有邀请的朋友，请把聚金推荐给朋友。</span>
+					</div>
+                    <div ng-if="invites && invites.length > 0" class="projects">
+                        <div class="recove">
+                            <div class="tit box">
+                                <span>邀请收入合计:</span>
+                                <span style="font-weight:bold">{{inviteReward}}</span>
+                                <span>元</span>
+                            </div>
+                            <div class="amounts box">
+                                <div class="amount" style="width: 25%; text-align: left;">
+                                    <span class="label">昵称</span>
+                                </div>
+                                <div class="amount" style="width:40%;  text-align:left;text-indent: 10px;">
+                                    <span class="label">投资区间(元)</span>
+                                </div>
+                                <div class="amount" style="width:35%">
+                                    <span class="label">手机</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="amounts box" ng-repeat="record in invites">
+                                <div class="amount" style="width: 25%; text-align: left">
+                                    <span style="text-align:center" class="ng-binding">{{record.nickName}}</span>
+                                </div>
+                                <div class="amount" style="width:40%;  text-align:left">
+                                    <span style="text-align:center">{{record.investRange}}</span>
+                                </div>
+                                <div class="amount" style="width:35%">
+                                    <span style="text-align:center" class="ng-binding">{{record.tel}}</span>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div ng-if="currentPage<totalPageCount" class="more" ng-click="loadMore()">加载更多邀请人</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

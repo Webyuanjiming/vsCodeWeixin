@@ -1,0 +1,101 @@
+﻿<link rel="stylesheet" type="text/css" href="/m/jujin/sign/css/signin.css">
+<div class="scrollable">
+    <div class="scrollable-content page-1">
+        <div class="page page-current">
+
+            <!--中奖弹窗-->
+
+            <div id="open_page12" ng-if="showMask" style="z-index: 1; background-color: rgba(93, 93, 95, 0.709804); width: 100%; height: 100%; display: block; position: fixed; top: 0px; left: 0px; opacity: 0.9700000000000008;">
+
+                <div style="background-color: #FFFFFF;position:absolute;top:20%;left: 10%;width:80%;text-align: center;border-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px;">
+
+                    <div ng-click="signDialog(false)" class="ub-img" style="background-image:url(/m/jujin/sign/img/close.png);width:2.0em;height:2.0em;position: absolute;right: 0.8em;top: 0em;background-size: cover;"></div>
+
+                    <img style="text-align: center;margin:1em 0;width:30%;" src="/m/jujin/sign/img/one_li.png" />
+
+                    <div style="font-size: 0.8em;line-height: 1.2em;margin: 1.0em 0.8em;">
+
+                        <p style="margin: 0 auto;width: 65%;">恭喜您获得<b style="font-size: 1.5em;color: #444;">{{sign.result}}</b>元抵现红包，明天来还可以获得<b style="font-size: 1.5em;color: #444;">{{sign.nextResult}}</b>元抵现红包哦！</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="jinbi0">
+
+                <img src="/m/jujin/sign/img/qd_03.png" />
+
+                <br/>
+
+                <p style="color: #FEF2EE;">您已累计签到<b style="font-size: 1.2em;">{{entity.signDays}}</b>天，已领取<b style="font-size: 1.2em;">{{entity.totalReward}}</b>元抵现红包</p>
+
+                <br/>
+
+                <button class="btn_5" id="btnSign" ng-if="entity.todayIsSign==0" ng-click="sign()">点击签到</button>
+
+                <button class="btn_5" ng-if="entity.todayIsSign==1" ng-click="signDetail()">签到明细</button>
+
+                <br/>
+
+                <br/>
+
+                <p style="text-align: left;text-indent:1.0em;color: #FFF;">连续{{entity.maxContinuityDay}}天可获得{{entity.maxReward}}元抵现红包</p>
+
+                <br/>
+
+                <div class="ding_5">
+
+                    <ul>
+
+                        <li ng-repeat="item in entity.items">
+
+                            <div ng-if="item.already" class="ding_5_color">
+
+                            </div>
+
+                            <div ng-if="item.last" class="baopen5">
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <br/>
+
+                <div style="text-align: right; width: 100%;">
+
+                    <p ng-if="indicate==0" style="color: #FFF;margin-right: 0.5em;">还差{{entity.needDay}}天</p>
+
+                    <p ng-if="indicate==1" style="color: #FFF;margin-right: 0.5em;">恭喜您可获得{{entity.maxReward}}元抵现红包</p>
+
+                </div>
+
+                <br/>
+
+                <div class="signIn_text">
+
+                    <p style="text-align: left;text-indent: 1.0em;color: #FFF;">活动规则</p>
+
+                    <div class="border_color5">
+
+                        <p>1.累计签到可以免费获取抵现红包，在投资时抵扣现金;有效期为31天</p>
+
+                        <p>2.首日领取可领0.3元，第二天0.6元，连续三天可领取1元。中断需要从0.3元开始。</p>
+
+                        <p>3.抵现红包在投资时可以抵扣现金。1月标、2月标可抵扣0.4%，三月标抵扣0.8%，六月标抵扣1.6% 。</p>
+                    </div>
+                </div>
+            </div>
+            <div ui-yield-to="modals"></div>
+            <div ui-content-for="modals">
+                <div ng-include="'/m/jujin/common.html'"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

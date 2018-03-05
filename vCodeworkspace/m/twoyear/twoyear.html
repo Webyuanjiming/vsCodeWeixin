@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta http-equiv="Content-Type">
+		<meta charset="utf-8">
+		<title>聚金资本两周年活动</title>
+        <meta name="author" content="聚金金融服务股份有限公司" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="format-detection" content="telephone=no,address=no,email=no">
+        <meta name="mobileOptimized" content="width">
+        <meta name="handheldFriendly" content="true">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" charset="utf-8"></script>
+		<script  type="text/javascript">
+			var ua = navigator.userAgent.toLowerCase();	
+			if (/iphone|ipad|ipod/.test(ua)) {
+				var fileref = document.createElement('link');
+				fileref.setAttribute("rel","stylesheet");
+				fileref.setAttribute("type","text/css");
+				fileref.setAttribute("href","css/index.css");
+				document.getElementsByTagName("head")[0].appendChild(fileref);
+				var detectBrowser = function(name) {
+					if(navigator.userAgent.toLowerCase().indexOf(name) > -1) {
+						return true;
+					} else {
+						return false;
+					}
+				};
+				var width = parseInt(window.screen.width);
+				var scale = width/640;
+				var userScalable = 'no';
+				if(detectBrowser("qq/")) userScalable = 'yes';
+				document.getElementById('viewport').setAttribute('content', 'width=640,user-scalable='+userScalable+',initial-scale=' + scale+',maximum-scale=' + scale+',minimum-scale=' + scale);			
+			} else if (/android/.test(ua)) {
+				var fileref = document.createElement('link');
+				fileref.setAttribute("rel","stylesheet");
+				fileref.setAttribute("type","text/css");
+				fileref.setAttribute("href","css/index2.css");
+				document.getElementsByTagName("head")[0].appendChild(fileref);		
+			}			
+		</script>
+    </head>
+    <script type="text/javascript">
+        window.onorientationchange=function(){
+            var obj=document.getElementById('orientation');
+
+            if(window.orientation==0){
+                obj.style.display='none';
+            }else
+            {
+                alert('横屏内容太少啦，请使用竖屏观看！');
+                obj.style.display='none';
+            }
+        };
+    </script>
+	<body>
+        <div class="mask-gobal">
+            <div class="load"></div>
+        </div>
+		<div class="wrapper">
+			<div class="page page-1-1 page-1-2 page-current">
+				<div class="wrap">
+                    <div class="wrap-top">
+                    </div>
+                    <div class="wrap-ball">
+                        <div class="cover-bg">
+                            <div class="ball-bg"></div>
+                            <img src="img/tyear@0.png" class="t-year0 pt-page-moveFromLeft"/>
+                            <img src="img/tyear@1.png" class="t-year1"/>
+                        </div>
+                    </div>
+                    <div class="rel-bg">
+                        <img class="img_2 pt-page-moveCircle" src="img/lo@go.png">
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/lo@text.png">
+                        </div>
+                    </div>
+                    <div class="endDateText">
+                        <p class="cover-text pt-page-scaleUp">数据统计截至<span id="dateline">2016.06.21</span></p>
+                    </div>                    
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+				</div>
+			</div>
+			<div class="page page-2-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over0" id="registerDate"></p>
+                        <p class="b-over1">注册了聚金资本</p>
+                    </div>
+                    <div class="wrap-ball">
+                        <div class="cover-man01"></div>
+                        <div class="cover-qi"></div>
+                        <div class="cover-bg0">
+                            <div class="ball01-bg"></div>
+                        </div>
+                        <div class="cover-man0"></div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/bal@text.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+			</div>
+			<div class="page page-3-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over0" id="firstTenderDate"></p>
+                        <p class="b-over2">第一次审慎的按下投资按钮</p>
+                        <p class="b-over2">并在不久后</p>
+                        <p class="b-over2">赚到了第一笔投资收益<b class="highlight" id="firstInterest"></b></p>
+                    </div>
+                    <div class="wrap-ball">
+                        <div class="cover-i0"></div>
+                        <div class="pt-page-moveXiUp">
+                            <div class="hand-bg"></div>
+                        </div>
+                    </div>
+                    <div class="x-line0">
+                        <div class="line-al">
+                            <div class="line-o0"></div>
+                            <div class="line-o1"></div>
+                            <div class="line-o2"></div>
+                            <div class="line-o3"></div>
+                            <div class="line-o4"></div>
+                        </div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/x@01.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+			</div>
+
+            <div class="page page-4-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <div id="hasSigned" style="display: none;">
+                            <p class="b-over0" id="firstSignDate"></p>
+                            <p class="b-over2">开始在聚金资本APP签到</p>
+                            <p class="b-over2">每日领取纯纯的聚金币</p>
+                        </div>
+                        <div id="noSigned" style="display: none;">
+                            <p class="b-over0">没尝试过APP签到？</p>
+                            <p class="b-over2">每日签奖励1元，随时随地投资。</p>
+                            <p class="b-over2">去官网下载吧！</p>
+                        </div>
+                    </div>
+                    <div class="star">
+                    </div>
+                    <div class="wrap-pb">
+                        <div class="cover-i1"></div>
+                        <div class="cover-i2"></div>
+                        <div class="cover-i3"></div>
+                        <div class="cover-bg02 pt-page-moveCircle">
+                            <div class="phone-bg"></div>
+                        </div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/txt@0.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-5-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <div id="hasInvited" style="display: none;">
+                            <p class="b-over0" id="firstInviteDate"></p>
+                            <p class="b-over3">第一位小伙伴<b class="highlight" id="firstInviteUser"></b></p>
+                            <p class="b-over3">邀请<b class="highlight"><span id="inviteUserCount"></span>位</b>小伙伴</p>
+                            <p class="b-over3">帮他们赚<b class="highlight"><span id="inviteInterest"></span>元</b></p>
+                            <p class="b-over3">自己额外获得<b class="highlight"><span id="rewardInterest"></span>元</b></p>
+                        </div>
+                        <div id="noInvited" style="display: none;" class="noInvited">
+                            <p class="b-over3">你知道吗？成为推荐人</p>
+                            <p class="b-over3">邀请小伙伴投资可以获得额外收益</p>
+                        </div>
+                    </div>
+                    <div class="ufo-rg">
+                        <div class="cover-y0"></div>
+                        <div class="cover-y1"></div>
+                        <div class="cover-y2"></div>
+                        <div class="cover-y3"></div>
+                        <div class="cover-bg02 pt-page-moveCircle">
+                            <div class="ufo-bg"></div>
+                            <ul class="graph-container">
+                                <li>
+                                    <span id="inviteUserCount2" style="display: none;"></span>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-container">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-inner" id="userCountColumn"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span id="inviteInterest2" style="display: none;"></span>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-container">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-inner blue" id="inviteColumn"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span id="rewardInterest2" style="display: none;"></span>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-container">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-inner yellow" id="rewardColumn"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/fu@0.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-6-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over3">这是我在聚金资本理财的<b class="highlight" id="stayDays"></b></p>
+                    </div>
+                    <div class="wrap-six pt-page-moveCircle">
+                        <div class="cover-six0"></div>
+                        <div class="cover-six01"></div>
+                        <div class="cover-six02"></div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/load@0.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-7-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over4">我一共投资了</p>
+                        <p class="b-over5"><b class="highlight2" id="totalInvest"></b>元</p>
+                    </div>
+                    <div class="son-page">
+                    </div>
+                    <div class="wrap-seven">
+                        <div class="cover-ven0"></div>
+                        <div class="cover-ven01"></div>
+                        <div class="cover-ven02"></div>
+                        <div class="cover-ven03"></div>
+                        <div class="cover-ven04"></div>
+                        <div class="cover-ven05"></div>
+                        <div class="cover-bg02 pt-page-moveCircle">
+                            <div class="seven-bg">
+                                <p class="seven-txt0">已经赚了</p>
+                                <p class="seven-txt1"><b class="highlight2 totalInterest"></b>元</p>
+                            </div>
+                            <div class="seven-omg">
+                                <div class="omg" id="perTitleIcon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sev-txt q2-flyin">
+                        <p class="sev-t0">恭喜你获得<span id="personalTitle"></span>称号！</p>
+                        <p class="sev-t0" id="personalDesc"></p>                        
+                    </div>
+                    <div class="sev-mis">
+                        <p class="sev-t01">因为中间有间断投资，错失了<span id="missMoney"></span>元</p>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-8-1 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over3">根据聚金大数据</p>
+                    </div>
+                    <div class="wrap-eit pt-page-moveCircle">
+                        <div class="eight-bg">
+                            <div class="grid-bg"></div>
+                            <div class="chart-bg"></div>
+                        </div>
+                        <div class="cover-eit0"></div>
+                        <p class="eit-txt0">未来可能超过</p>
+                        <div class="earning q2-flyin" id="earningTitle"></div>
+                        <p class="eit-txt01">理财、养家，全都OK！</p> 
+                        <div class="cover-eit02"></div>
+                        <div class="cover-eit03"></div>
+                        <div class="cover-eit04"></div>
+                        <div class="cover-eit05">
+                            <div class="eit05-txt">
+                                <b style="font-weight: normal;" class="totalInterest"></b>
+                            </div>
+                        </div>                      
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/eit@1.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+            <div class="page page-9-1 hide">
+                <div class="wrap">
+                    <div class="wrap-eit pt-page-moveCircle">
+                        <div class="cover-nine0"></div>
+                        <div class="cover-nine01"></div>
+                        <div class="cover-nine02"></div>
+                        <div class="cover-nine03"></div>
+                        <div class="cover-nine04"></div>
+                        <div class="cover-nine05"></div>
+                        <div class="nin-ov">
+                            <p class="nine-to0">分享给小伙伴</p>
+                            <P class="nine-to0">即可获得20元红包</p>
+                        </div>
+                    </div>
+                    <div class="eit-bg">
+                        <a href="javascript:;" onclick="shareNow();">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/rel@btn.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page page-2-2 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over0">你还没有投资哦</p>
+                        <p class="b-over3">有<b style="color: #fff000;font-weight: normal;">50,000元</b></p>
+                        <p class="b-over3">三月标，一年可挣<b style="color: #fff000;font-weight: normal;">7200元</b></p>
+                    </div>
+                    <div class="ufo-rg">
+                        <div class="cover-y0"></div>
+                        <div class="cover-y1"></div>
+                        <div class="cover-y2"></div>
+                        <div class="cover-bg02 pt-page-moveCircle">
+                            <div class="ufo-bg"></div>
+                            <ul class="graph-container">
+                                <li>
+                                    <span>7200</span>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-container">
+                                            <div class="bar-background"></div>
+                                            <div class="bar-inner" style="height: 75%;"></div>
+                                            <div class="bar-foreground"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="pho">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/pho@02.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+            <div class="page page-3-2 hide">
+                <div class="wrap">
+                    <div class="bal-cover0">
+                        <p class="b-over0">没关系，理财需要规划还来得及</p>
+                        <p class="b-over2">注册送68元</p>
+                        <p class="b-over2">APP签到，每日一元</p>
+                    </div>
+                    <div class="star">
+                    </div>
+                    <div class="wrap-pb">
+                        <div class="cover-i1"></div>
+                        <div class="cover-i2"></div>
+                        <div class="cover-i3"></div>
+                        <div class="cover-bg02 pt-page-moveCircle">
+                            <div class="phone-bg"></div>
+                        </div>
+                    </div>
+                    <div class="pos-bg">
+                        <div class="rel-bg">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/txt@01.png">
+                        </div>
+                    </div>
+                    <div class="por-bot">
+                        <img class="img_3 pt-page-moveIconUp" src="img/icon_up.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page page-4-2 hide">
+                <div class="wrap">
+                    <div class="wrap-eit pt-page-moveCircle">
+                        <div class="cover-nine0"></div>
+                        <div class="cover-nine06 pt-page-moveFromBottom"></div>
+                        <div class="cover-nine02"></div>
+                        <div class="cover-nine03"></div>
+                        <div class="cover-nine04"></div>
+                        <div class="cover-nine05"></div>
+                    </div>
+                    <div class="eit-bg">
+                        <a href="http://m.jujinziben.com">
+                            <img class="ir-pt pt-page-moveFromBottom" src="img/wei@01.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <script src="js/zepto.min.js"></script>
+		<script src="js/touch.js"></script>
+		<script src="js/index.js"></script>
+        <script src="js/main.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,85 @@
+<div ui-content-for="title">
+	<span>绑定个人银行卡</span>
+</div>
+<style type="text/css">
+	select.form-control,button.user-defined{
+		display: inline;
+	}
+</style>
+<div class="scrollable">
+	<!--第一步，输入银行卡号-->
+	<div class="scrollable-content section" >
+		<form name="ngForm1" ng-submit="confirm(1)" ng-show="step1">
+			<fieldset>
+				<legend>绑定个人银行卡</legend>
+				<div class="form-group">
+					<!--持卡人-->
+					<input type="text" class="form-control"  ng-model="form1.username" placeholder="请填写持卡人姓名" required/>
+				</div>
+				<div class="form-group">
+					<!--卡号-->
+					<input type="text" class="form-control" ng-model="form1.cardnum" ng-pattern="/^\d{15,19}$/" placeholder="请填写本人持有的银行卡" required/>
+				</div>
+			</fieldset>
+			<hr />
+			<button type="submit" class="btn btn-primary btn-block" ng-disabled="ngForm1.$invalid" >
+				下一步
+			</button>
+		</form>
+		<!--第二步，填写银行卡信息-->
+		<form name="ngForm2" ng-show="step2" ng-submit="confirm(2)">
+			<fieldset>
+				<legend>填写银行卡信息</legend>
+				<div class="form-group">
+					<!--卡类型-->
+					<select class="form-control" ng-model="form2.cardtype" required>
+						<option ng-selected="true" value="0">请选择银行</option>
+						<option  ng-repeat="bank in banks" value="{{bank.no}}">{{bank.name}}</option>
+					</select>
+				</div>
+				<div class="form-group" twolinkage>
+					<!--所在地二级联动下拉列表-->
+
+				</div>
+				<div class="form-group">
+					<!--开户行名称-->
+					<input type="text" class="form-control" placeholder="请填写开户行支行名称" ng-model="form2.depositbank" required/>
+				</div>
+			</fieldset>
+			<hr />
+			<div class="form-group">
+				<button type="button" class="btn btn-info user-defined" ng-click="confirm(4)" style="width: 47%;">
+					上一步
+				</button>
+				<button type="submit" class="btn btn-primary user-defined" ng-disabled="ngForm2.$invalid" style="width: 47%;">
+					下一步
+				</button>
+			</div>
+		</form>
+
+		<!--第三步，完成绑定-->
+		<form name="ngForm3" ng-submit="confirm(3)" ng-show="step3">
+			<fieldset>
+				<legend>完成绑定</legend>
+				<div class="input-group">
+					<!--手机验证码-->
+					<label for="validcode" class="sr-only">手机验证码</label>
+					<input type="text" class="form-control" placeholder="请输入六位短信验证码" id='validcode' ng-model="form3.validcode" required/>
+					<div class="input-group-addon btn" style="background: #ccc;" ng-click="sendmsg()">{{btnmsg}}</div>
+				</div>
+				<div class="msg-wrapper" ng-if="msg">
+					<p class="auth-msg auth-error">{{msg}}</p>
+				</div>
+			</fieldset>
+			<hr />
+			<div class="form-group">
+				<button type="button" class="btn btn-info user-defined" ng-click="confirm(5)" style="width: 47%;">
+					上一步
+				</button>
+				<button type="submit" class="btn btn-success user-defined" ng-disabled="ngForm3.$invalid" style="width: 47%;">
+					完成
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

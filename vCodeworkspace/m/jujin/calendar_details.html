@@ -1,0 +1,156 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>回款详情</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section" style="background-color: #F0F2F5;">
+        <div class="scroll-calendar">
+            <div jj-calender select-month="selectMonth" on-prevs-month="prevsMonth(data)" on-current-month="curMonth(data)" on-next-month="nextMonth(data)" on-one-click="dateFilter(date);" store="calStore">
+            </div>
+            <div class="cor_len"></div>
+            <div class="ler_cr">
+                <div class="ler_all">
+                    <div class="ler_bt_left cr_br">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{allRver}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt" ng-show="tempDate.length != '10'">本月应回（元）</p>
+                                    <p class="rg-rt" ng-show="tempDate.length == '10'">本天应回（元）</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ler_bt_right">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{okRver}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt">已回（元）</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ler_cr" ng-show="lerCall">
+                <div class="ler_all">
+                    <div class="ler_bt_left cr_br">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{corpus}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt">本金</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ler_bt_right">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{accrual}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt">利息</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ler_cr" ng-show="lerAll">
+                <div class="ler_pr">
+                    <div class="ler_bt_left cr_br">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{recoverCorpus}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt">已回本金</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ler_bt_right">
+                        <div class="ler_lt">
+                            <ul>
+                                <li>
+                                    <p class="rg-lt">{{recoverAccrual}}</p>
+                                </li>
+                                <li>
+                                    <p class="rg-rt">已回利息</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ful_ig">
+                <div class="ful_inr" ng-click="fulInr()"></div>
+            </div>
+            <div class="cr-xot">
+                <p class="xo-p">无回款记录</p>
+            </div>
+            <div class="rco-box">
+                <div class="rco-table-list">
+                    <table class="rc-lit2" ng-repeat="irt in arr" >
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="rco_left">{{irt.date}}</div>
+                                </th>
+                                <th>
+                                    <div class="rco_right" ng-class="{'ri_cor0':{{irt.statusName=='已回款'}},'ri_cor1':{{irt.statusName=='未回款'}}}">{{irt.statusName}}</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="ar in irt.data">
+                                <th class="tol1">
+                                    <div class="lx_cr" ng-class="{'clr1':{{ar.type==1}},'clr2':{{ar.type==2||ar.type==3}},'clr3':{{ar.type==4||ar.type==5}},}">
+                                        {{ar.type|moneyType}}
+                                    </div>
+                                </th>
+                                <th class="tol02">
+                                    <div class="bow1">
+                                        {{ar.borrowTitle}}
+                                    </div>
+                                </th>
+                                <th class="tol03">
+                                    <div class="bow2">
+                                        {{ar.amount}}
+                                    </div>
+                                </th>
+                                <th class="tol04" ng-click="bow(ar)">
+                                    <div class="bow3" ng-show="ar.status=='已还'">
+                                    </div>
+                                    <div class="bow4" ng-show="ar.status=='未还' && ar.type=='1'&& ar.continueStatus==0">
+                                        续投设置
+                                    </div>
+                                    <div class="bow4" ng-show="ar.status=='未还' && ar.type=='1'&& ar.continueStatus==1">
+                                        取消续投
+                                    </div>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div ui-content-for="modals">
+            <div ng-include="'/m/jujin/common.html'"></div>
+        </div>
+
+    </div>
+</div>

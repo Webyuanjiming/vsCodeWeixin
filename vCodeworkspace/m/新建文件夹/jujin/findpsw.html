@@ -1,0 +1,93 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+	<span>找回密码</span>
+</div>
+<div class="scrollable">
+
+	<div class="scrollable-content section">
+		<!--
+    	第一步
+    -->
+		<div id="jm-user-reg-form-c" class="section ng-show" ng-hide="findpsw1.$submitted && step2">
+			<form name="findpsw1" class="form-inline" ng-submit="confirm(1)" novalidate>
+                <div class="item-ming-0">
+                    <ul class="items" style="padding-left: 10px;">
+                        <li>
+                            <label for="phone" class="txt" style="font-size: 14px;">手机号码</label>
+                            <input type="text" id="phone" placeholder="请输入注册的手机号码" style="font-size: 14px;line-height: 16px;" ng-model="form1.phone" required/>
+                            <!-- ngIf: phoneerror -->
+                        </li>
+                        <li>
+                            <label for="validcode" class="txt" style="font-size: 14px;">验证码</label>
+                            <input type="text" placeholder="请输入六位短信验证码" id='validcode' style="width: 50%;float: left;  font-size: 14px;line-height: 43px;" ng-model="form1.validcode" required/>
+						</li>
+
+						<li ng-if="validate">
+                                    <label class="txt" style="font-size: 14px;">验证码</label>
+                                    <input id="captcha" type="text" ng-model="form1.imgVerifyCode" placeholder="请输入验证码" name="captcha" required="" required-msg="验证码不可为空" class="mo_ica">
+                                    <img id="captcha-img" class="ica_img" ng-src="{{validateStr}}" ng-click="drawImg()">
+                                    <div class="msg-wrapper" style="display: none;"></div>
+                        </li>
+
+                        <li>
+                            <div class="input-group-addon btn ming-vali-y" style="background: #ccc;" ng-click="sendmsg()">{{btnmsg}}</div>
+                            <!-- ngIf: valierror -->
+                        </li>
+                    </ul>
+
+                </div>
+
+				<div class="form-group ng-hide" ng-show="msg=='请输入用户名'">
+					<label for="username" class="sr-only">用户名</label>
+					<input type="text" class="form-control" placeholder="请输入注册的用户名" id='username'ng-model="form1.username"
+						ng-required="msg==='请输入用户名'?true:false"/>
+				</div>
+
+				<small class="form-group text-danger ng-hide" ng-show="msg">{{msg}}</small>
+
+				<button type="submit" class="btn btn-block btn-primary"
+					ng-disabled="findpsw1.$invalid">
+					下一步
+				</button>
+			</form>
+		</div>
+
+		<!--
+    	第二步
+        -->
+		<div class="section ng-hide" ng-show="findpsw1.$submitted && step2">
+			<form name="findpsw2" class="form-inline" ng-submit="confirm(2)" novalidate>
+				<div class="form-group">
+					<label for="psw" class="sr-only">新密码</label>
+					<input type="password" class="form-control" ng-model="form2.psw" placeholder="请输入新密码" id='psw' required/>
+				</div>
+				<div class="form-group">
+					<label for="repsw" class="sr-only">再次输入密码</label>
+					<input type="password" class="form-control" ng-model="form2.repsw" placeholder="再次输入密码" id='repsw' required/>
+				</div>
+				<hr />
+				<button class="btn btn-block btn-success" >确认</button>
+			</form>
+		</div>
+	</div>
+	<div ui-content-for="modals">
+		<div class="modal" ui-if='dialog' ui-state='dialog'>
+			<div class="modal-backdrop in"></div>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<p>{{msg}}</p>
+					</div>
+					<div class="modal-footer">
+						<button ui-turn-off="dialog" ng-click="close()" class="btn btn-default">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
