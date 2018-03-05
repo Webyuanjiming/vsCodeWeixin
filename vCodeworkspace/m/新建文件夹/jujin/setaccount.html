@@ -1,0 +1,29 @@
+<!-- 账户设置 -->
+<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>账户设置</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section">
+
+
+        <div id="jm-touch" class="app-link-displaying">
+            <div id="jm-account-links" class="jm-goto-links">
+                <a href="#/attest">认证中心<span class="arrow">&gt;</span></a>
+                <a href="#/bankcard">银行卡<span class="arrow">&gt;</span></a>
+                <a href="#/bindbc">银行卡绑定<span class="arrow">&gt;</span></a>
+                <a href="#/changepsw">修改密码<span class="arrow">&gt;</span></a>
+            </div>
+
+            <div style="margin: 11px 10px;">
+               <a ng-click="logout()" class="btn btn-danger btn-block">退出登录</a>
+            </div>
+        </div>
+
+        <div ui-content-for="modals">
+            <div ng-include="'/m/jujin/common.html'"></div>
+        </div>
+    </div>
+</div>

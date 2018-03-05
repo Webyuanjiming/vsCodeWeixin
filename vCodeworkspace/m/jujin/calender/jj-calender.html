@@ -1,0 +1,33 @@
+<div class="calender">
+    <div class="tails">
+        <div class="details_top">
+            <div class="tis_lt" ng-click="previousMonth();"></div>
+            <div class="tis_ctr"><a ng-click="currentMonth();">{{year}}年{{month}}月</a></div>
+            <div class="tis_gt" ng-click="nextMonth();"></div>
+        </div>
+    </div>
+    <div class="all_days">
+        <div class="weeks">
+            <table class="table_week">
+                <thead>
+                    <tr>
+                        <th ng-repeat="day in daysOfTheWeek">周{{day}}</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="days">
+            <table class="days_table">
+                <tbody>
+                <tr>
+                    <th ng-repeat="day in days">
+                        <div ng-class="{'fb-all':{{day.isToday==true}},'fb01':{{day.onMonth==true}},'fb-al':day.date && {{day.date==activeDate}}}" ng-click="showOneDay(day.date);">
+                            {{day.day}}<div ng-class="{'fb37':{{day.isRecover==true}},'frt':{{activeDate==true}}}"></div>
+                        </div>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿{"entity": {
+    "dldjs": [
+        {
+            "award": "iphone7",
+            "quantity": "1"
+        },
+        {
+            "award": "蓝牙音箱",
+            "quantity": "3"
+        }
+    ],
+    "hjjls": [
+        {
+            "award": "ipad mini4",
+            "ganyan": "",
+            "time": "2016-09-12 15:32:27",
+            "userId": "JU***jj"
+        },{
+            "award": "880元电话费",
+            "ganyan": "",
+            "time": "2016-09-09 01:52:00",
+            "userId": "ha***ie"
+        }
+    ]
+}, "loginstatus": 0, "status": true}

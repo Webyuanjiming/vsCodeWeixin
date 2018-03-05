@@ -1,0 +1,310 @@
+<!--
+
+    时间：2015-04-27
+
+    描述：修改密码
+
+-->
+
+<div ui-content-for="title">
+
+    <span>修改密码</span>
+
+</div>
+<style>
+    .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default{
+        color: #448FEC;
+        background-color:#FFF;
+        border-bottom:solid 1px;
+        border-color: #448FEC;
+        text-align: center;
+    }
+
+</style>
+<div class="scrollable">
+
+    <div class="scrollable-content">
+
+        <div class='section'>
+
+            <ui-state id='activeTab' default='1'></ui-state>
+
+            <div class="nav-tabs">
+
+                <a ui-set="{'activeTab': 1}"
+
+                   ui-class="{'active': activeTab == 1}" class="btn-default active" style="width: 50%;display: inline-block;float: left;text-align: center;">登陆密码</a>
+
+                <a ui-set="{'activeTab': 3}"
+
+                   ui-class="{'active': activeTab == 3}" class="btn-default active" style="width: 50%;display: inline-block;text-align: center;">提现密码</a>
+
+            </div>
+
+            <div ui-if="activeTab == 1">
+
+                <div>
+
+                    <form name="ngForm1" ng-submit="confirm(1)" novalidate>
+
+                        <fieldset>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="输入原登陆密码"
+
+                                       ng-model="form1.oldPwd"
+
+                                       required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       ng-model="form1.pwd"
+
+                                       placeholder="输入登陆密码" required>
+
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       ng-model="form1.againPwd"
+
+                                       placeholder="再次输入登陆密码"
+
+                                       required>
+
+                            </div>
+
+                            <div class="msg-wrapper" ng-if="msg1">
+
+                                <p class="auth-msg auth-error">{{msg1}}</p>
+
+                            </div>
+
+                        </fieldset>
+
+                        <hr>
+
+                        <button class="btn btn-primary btn-block" ng-disabled="ngForm1.$invalid || ngForm1.$submitted || show1">
+
+                            提交
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div ui-if="activeTab == 2">
+
+                <div>
+
+                    <form name="ngForm2" ng-submit='confirm(2)' novalidate>
+
+                        <fieldset>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="输入原交易密码"
+
+                                       ng-model="form2.oldPwd"
+
+                                       ng-required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="输入交易密码"
+
+                                       ng-model="form2.pwd"
+
+                                       ng-required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="再次输入交易密码"
+
+                                       ng-model="form2.againPwd"
+
+                                       ng-required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="captcha-c">
+
+                                    <input type="text" ng-model="form2.validateCode" placeholder="请输入验证码" ng-required required-msg="验证码不可为空" class="form-control">
+
+                                    <img id="captcha-img" ng-src="{{validateStr}}" ng-click="drawImage()">
+
+                                    <div class="msg-wrapper" style="display: none;"></div>
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="msg-wrapper" ng-if="msg2">
+
+                                <p class="auth-msg auth-error">{{msg2}}</p>
+
+                            </div>
+
+                        </fieldset>
+
+                        <hr>
+
+                        <button id="btnSubmit1" class="btn btn-primary btn-block" ng-disabled="ngForm2.$invalid || ngForm2.$submitted || show2">
+
+                            提交
+
+                        </button>
+
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div ui-if="activeTab == 3">
+
+                <div>
+
+                    <form name="ngForm3" ng-submit='confirm(3)' novalidate>
+
+                        <fieldset>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="输入原提现密码"
+
+                                       ng-model="form3.oldPwd"
+
+                                       required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="输入提现密码"
+
+                                       ng-model="form3.pwd"
+
+                                       required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="password"
+
+                                       class="form-control"
+
+                                       placeholder="再次输入提现密码"
+
+                                       ng-model="form3.againPwd"
+
+                                       required>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <div class="captcha-c">
+
+                                    <input type="text" ng-model="form3.validateCode" placeholder="请输入验证码" required required-msg="验证码不可为空" class="form-control">
+
+                                    <img id="captcha-img" ng-src="{{validateStr}}" ng-click="drawImage()">
+
+                                    <div class="msg-wrapper" style="display: none;"></div>
+
+                                </div>
+
+                                <div class="msg-wrapper" ng-if="captchaerror">
+
+                                    <p class="auth-msg auth-error">请输入验证码</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="msg-wrapper" ng-if="msg3">
+
+                                <p class="auth-msg auth-error">{{msg3}}</p>
+
+                            </div>
+
+                        </fieldset>
+
+                        <hr>
+
+                        <button id="btnSubmit2" class="btn btn-primary btn-block" ng-disabled="ngForm3.$invalid|| ngForm3.$submitted || show3">
+
+                            提交
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div ui-content-for="modals">
+
+    <div ng-include="'overlay.html'"></div>
+
+</div>

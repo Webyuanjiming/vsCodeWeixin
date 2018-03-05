@@ -1,0 +1,591 @@
+/**
+*Author:web yuanjiming
+*Double Eleven .....
+*copyright here!
+*All css  is  here!
+*create by w8 on Date 10/28 2016
+**/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{border: 0;margin: 0;padding: 0;}
+.mdouble{
+    max-width: 640px;min-width: 320px;height:190em;margin:0 auto;background-color: #EECE95;
+    position: relative;
+}
+.mdle-top{
+    width: 100%;
+    height: 20em;
+    background: url("../images/mdb@0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.mde-icon{
+    width: 75%;
+    height: 2.5em;
+    background: url(../images/mdb@01.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    color: #ff0000;
+    font-size: 0.85em;
+    line-height: 2.5em;
+    text-align: center;
+}
+.eleven-icon{
+    width: 60%;
+    height: 3.5em;
+    background: url(../images/mde@icon0.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 70%;
+}
+.eleven-icon-txt0{
+    width: 90%;
+    height: 3.5em;
+    color: #000000;
+    font-size: 0.75em;
+    line-height: 1.8em;
+    margin: 10px auto;
+}
+.eleven-map{
+    width: 100%;
+    height:40em;
+    background: url("../images/mdb@02.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: 0;
+}
+.radius-gif{
+    width: 3.8em;
+    height: 3.8em;
+    background: url("../images/jujin.gif");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+.ras-i00{
+    position: absolute;
+    left: 0;
+    top:30px;
+}
+.ras-i{
+    position: absolute;
+    top: 38px;
+    left: 18%;
+}
+.ras-i0{
+    position: absolute;
+    top: 165px;
+    left: 28%;
+}
+.ras-i1{
+    position: absolute;
+    top: 285px;
+    left: 10%;
+}
+.ras-i2{
+    position: absolute;
+    top: 390px;
+    left: 28%;
+}
+.ras-i3{
+    position: absolute;
+    top: 412px;
+    right:26%;
+}
+.ras-i4{
+    position: absolute;
+    bottom: 30px;
+    right:0;
+}
+.radius-icon0,.radius-icon1,.radius-icon2,.radius-icon3,.radius-icon4,.radius-icon5{
+    width: 3.8em;
+    height: 3.8em;
+    background: url("../images/radius@hui.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+.intro{
+    width: 3.8em;
+    height: 3.8em;
+    background: url("../images/radius@red.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+.rad0{
+    color: #FFF;
+    font-size: 0.65em;
+    line-height: 1.4em;
+    text-align: center;
+    margin-top:6px;
+    width: 100%;
+    float: left;
+}
+.radius-icon0 p.rad01,.radius-icon1 p.rad01,.radius-icon2 p.rad01,.radius-icon3 p.rad01,.radius-icon4 p.rad01,.radius-icon5 p.rad01{
+    font-size: 0.65em;
+    line-height: 1.4em;
+    text-align: center;
+    color: #fff;
+}
+.intro p.rad01{
+    font-size: 0.65em;
+    line-height: 1.4em;
+    text-align: center;
+    color: #fffc00;
+}
+.name-invest{
+    width: 90%;
+    height: 8em;
+    margin: 0 auto;
+}
+.name-invest ul{width: 100%;height: 100%;float: left;}
+.name-invest ul li{
+    float: left;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+}
+.name-cion{
+    width: 4.5em;
+    height:4.5em;
+    margin: 0 auto;
+    background: url("../images/name@0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.n-ig{
+    position: absolute;
+    width: 100%;
+    height:18px;
+    background: url("../images/name@ren0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom:5px;
+}
+.n-ig0{
+    position: absolute;
+    width: 100%;
+    height:18px;
+    background: url("../images/name@ren00.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom:5px;
+}
+.invest-cion{
+    width: 4.5em;
+    height:4.5em;
+    margin: 0 auto;
+    background: url("../images/invest@0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.iv-ig{
+    position: absolute;
+    width: 100%;
+    height:18px;
+    background: url("../images/invest@tou0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom:5px;
+}
+.iv-ig0{
+    position: absolute;
+    width: 100%;
+    height:18px;
+    background: url("../images/invest@tou00.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom:5px;
+}
+.name-icon-txt,.invest-icon-txt{
+    margin-top: 6px;
+}
+.name-icon-txt p,.invest-icon-txt p{
+    color: #fc4242;
+    font-size: 0.85em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.out-man{
+    width: 100%;
+    float: left;
+    height:111px;
+}
+.out-man p{
+    font-size: 1.0em;
+    line-height: 35px;
+    color: #f92a30;
+    text-align: center;
+}
+.out-man p b{
+    font-size: 1.0em;
+    line-height: 35px;
+    color: #f92a30;
+}
+.out-man p abbr{
+    color: #ff8a00;
+    font-size: 1.2em;
+    line-height: 36px;
+}
+.out-man p abbr font{
+    color: #ff8a00;
+    font-size: 1.1em;
+    line-height: 36px;
+}
+
+.inr-box{
+    width: 40%;
+    height: 50px;
+    float: right;
+    margin-bottom: 5px;
+}
+.inr-box ul{
+    width: 100%;
+    height: 100%;
+}
+.inr-box ul li{
+    float: left;
+    list-style: none;
+    width: 50%;
+}
+.inr-box-one{
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background: url("../images/inr@0.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.inr-box-two{
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background: url("../images/inr@01.png");
+    background-size: 100% 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.ir0{
+    width:100%;
+    height:14px;
+    position: absolute;
+    bottom: 2px;
+    background-repeat: no-repeat;
+    background: url("../images/ir@bx0.png");
+    background-size: 100% 100%;
+}
+.ir00{
+    width:100%;
+    height:14px;
+    position: absolute;
+    bottom: 2px;
+    background-repeat: no-repeat;
+    background: url("../images/ir@bx00.png");
+    background-size: 100% 100%;
+}
+.ix0{
+    width:100%;
+    height:14px;
+    position: absolute;
+    bottom: 2px;
+    background-repeat: no-repeat;
+    background: url("../images/ir@in0.png");
+    background-size: 100% 100%;
+}
+.ix00{
+    width:100%;
+    height:14px;
+    position: absolute;
+    bottom: 2px;
+    background-repeat: no-repeat;
+    background: url("../images/ir@in00.png");
+    background-size: 100% 100%;
+}
+.inr-list p.in-p0{
+    font-size: 1.0em;
+    line-height: 1.5em;
+    text-align: center;
+    color: #f92a30;
+    width: 100%;
+    height: 30px;
+    float: left;
+}
+.n-list{
+    width: 100%;
+    height: 270px;
+    float: left;
+    background: #FEE0A9;
+}
+.n-tp{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.0em;
+    float: left;
+    text-align: center;
+    color: #f92a30;
+    border-bottom: 1px solid #EECE95;
+}
+.ng-lit{
+    width: 100%;
+    float: left;
+    height: 240px;
+}
+.ng-tall{
+    width: 100%;
+    height: 100px;
+    float: left;
+    margin-top: 75px;
+}
+.ng-t-img{
+    width: 2.5em;
+    height: 2.5em;
+    background: url("../images/int@icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.ng-t-txt p{
+    font-size: 1.0em;
+    line-height: 2.0em;
+    text-align: center;
+    color: #d2b37c;
+}
+.ivt100{
+    width: 100%;
+    height: 45px;
+    float: left;
+    margin-top: 20px;
+}
+.ivt-btn{
+    width: 150px;
+    height: 45px;
+    margin: 0 auto;
+    background: url("../images/ivt@btn.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fffc00;
+    font-size: 1.0em;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cot240-table{
+    width: 100%;
+    float: left;
+    height: 240px;
+}
+
+.cot-head>tr>th {
+    font-size:0.85em;
+    line-height: 40px;
+    text-align: center;
+    color: #a07830;
+    width:25%;
+    height: 40px;
+    float: left;
+}
+.cot-body {
+    height: 160px;
+    width: 100%;
+    float: left;
+    overflow-y: auto;
+    border-bottom: 1px solid #EECE95;
+}
+.cot-body>tr{
+    border-bottom: 1px solid #EECE95;
+    float: left;
+    width: 100%;
+}
+.cot-body>tr:last-child{
+    border-bottom: none;
+}
+.cot-body tr td {
+    font-size:0.85em;
+    text-align: center;
+    color: #a07830;
+    width:25%;
+    height: 40px;
+    float: left;
+    line-height: 1.2em;
+}
+.cot-foot {
+    width: 100%;
+    height: 40px;
+    float: left;
+}
+.cot-foot tr{
+    float: left;
+    width: 100%;
+}
+.cot-foot tr td {
+    font-size:0.65em;
+    font-weight: bold;
+    text-align: center;
+    color: #a07830;
+    width: 25%;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+}
+
+.elv-two,.elv-three{
+    width: 100%;
+    float: left;
+}
+
+.elv-two-icon{
+    width: 60%;
+    height: 3.5em;
+    background: url(../images/mde@icon1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 10px auto;
+}
+.elv-three-icon{
+    width: 60%;
+    height: 3.5em;
+    background: url(../images/mde@icon2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 10px auto;
+}
+
+.box-t{
+    width: 95%;
+    margin: 0 auto;
+}
+.box-t p{
+    font-size: 0.75em;
+    line-height:2.0em;
+    color: #000000;
+}
+
+.box-t-img{
+    width: 100%;
+    height:5.8em;
+    margin:20px auto 10px auto;
+}
+.box-tr-img{
+    width: 100%;
+    height:225px;
+    margin:20px auto 10px auto;
+}
+
+.box-t-btn{
+    width: 150px;
+    height: 45px;
+    margin: 0 auto;
+    background: url(../images/ivt@btn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fffc00;
+    font-size: 1.0em;
+    line-height: 45px;
+    text-align: center;
+}
+.box-ic{
+    width: 100%;
+    float: left;
+}
+
+.box-tr-btn{
+    width: 60%;
+    height: 3.5em;
+    background: url(../images/box@t02.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 10px auto;
+}
+.box-tr-list{
+    width: 95%;
+    height:300px;
+    margin: 0 auto;
+    background-color: #FEE0A9;
+}
+.ige-to {
+    width: 100%;
+    height: 40px;
+    float: left;
+    border-bottom: 1px solid #EECE95;
+}
+.ige-to ul {
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+.ige-to ul li {
+    float: left;
+    list-style: none;
+    width: 50%;
+    color: #a07830;
+    text-align: center;
+    font-size:0.85em;
+    line-height: 40px;
+}
+.ige-ul-list{
+    width: 100%;
+    float: left;
+    height: 260px;
+    overflow: hidden;
+}
+.ige-ul-list ul{
+    float: left;
+    height: 40px;
+    width: 100%;
+}
+.ige-ul-list ul li{
+    float: left;
+    list-style: none;
+    width: 50%;
+    color: #e23333;
+    font-size: 0.85em;
+    line-height:40px;
+    text-align: center;
+}
+
+.box-ic-txt{
+    width: 100%;
+    float: left;
+    height: auto;
+}
+.box-ic-txt h3{
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 2.0em;
+    text-indent: 8px;
+}
+.box-ic-txt p{
+    font-size: 0.95em;
+    line-height: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+    color: #000000;
+}
+
+.cion-btn{
+    width: 150px;
+    height: 45px;
+    margin: 0 auto;
+    background: url(../images/ivt@btn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #fffc00;
+    font-size: 1.0em;
+    line-height: 45px;
+    text-align: center;
+}

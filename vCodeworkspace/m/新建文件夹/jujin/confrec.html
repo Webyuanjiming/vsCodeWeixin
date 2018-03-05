@@ -1,0 +1,35 @@
+﻿<div ui-content-for="back">
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+</div>
+<div ui-content-for="title">
+    <span>确认充值</span>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content section">
+
+        <div id="jm-touch">
+            <div id="jm-cards">
+                <label>确认充值</label>
+                <ul>
+                     <li>
+                        <div class="card-icon bank-2-{{bankCard.bankType}}"></div>
+                        <div class="title"><h2>{{bankCard.bankName}}</h2></div>
+                        <div class="cont"><span>{{bankCard.cardId}}</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="input-group">
+		        <input type="number" class="form-control" ng-model="amout" disabled />
+		        <div class="input-group-addon">.00</div>
+		    </div>
+            <form method="post" action="https://yintong.com.cn/llpayh5/authpay.htm">
+            	<div class="form-group">
+            		<input  name="req_data" type="hidden" value="{{value}}" />
+		        </div>
+		        <div class="form-group">
+		        	<button type="submit" class="form-control btn-primary" ng-disabled="!value" >确认充值</button>
+		        </div>
+	        </form>
+        </div>
+    </div>
+</div>

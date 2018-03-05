@@ -1,0 +1,41 @@
+<div ng-init="queryData();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="refreshReport();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="queryCont">
+        <ul>
+            <li ng-repeat="searchItem in searchItems">
+                <!--输入框-->
+                <div class="mr" ng-if="searchItem.type == 'input'">
+                    <label class="font-x  px-i0">{{searchItem.label}}:</label> 
+                    <input class="emb form-control" ng-model="searchItem.value" />
+                </div>
+                <!--日期控件-->
+                <div class="mr" ng-if="searchItem.type == 'datepicker'" jj-date-picker searchItem="{{searchItem}}">
+                    <!-- <label class="font-x  px-i0">{{searchItem.label}}:</label> 
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="searchItem.value" id="{{searchItem.id}}" 
+                    datafm="{{searchItem.fm}}" jj-date-picker/> -->
+                </div>
+                <!--下拉框-->
+                <div class="mr" ng-if="searchItem.type == 'select'">
+                    <label class="font-x  px-i0">{{searchItem.label}}:</label> 
+                    <select class="emb form-control" ng-model="searchItem.value" ng-options="node.id as node.name for node in searchItem.options">
+                    </select>
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns" ng-repeat="btnItem in btnList">
+            <!-- 查询-->
+            <button ng-if="btnItem.type == 'query'" class="eii btn btn-primary" ng-click="queryData();" ng-bind="btnItem.text"></button>
+            <!-- 导出-->
+            <button ng-if="btnItem.type == 'export'" class="eii btn btn-primary" ng-click="exportData();" ng-bind="btnItem.text"></button>         
+        </div>
+    </div>
+    <div class="reportCont">
+        <h3 class="title" ng-bind="reportTitle"></h3>
+        <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+        <table ng-table="report.tableParams" class="reportTable table-striped table table-bordered" id="jj-table">
+            <!--行信息，parentid要与父元素id保持一致-->
+            <div jj-table parentid="jj-table"></div>
+        </table>       
+    </div>   
+</div>

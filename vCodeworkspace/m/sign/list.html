@@ -1,0 +1,76 @@
+<div ui-content-for="back">
+
+    <a href="javascript:window.history.go(-1)"><img src="/m/images/back_24.png" /></a>
+
+</div>
+
+<div ui-content-for="title">
+
+    <span>签到明细</span>
+
+</div>
+
+<div class="scrollable">
+
+    <div class="scrollable-content page-1">
+
+        <div class="page page-current">
+
+            <div class="jinbi0">
+
+                <img src="/m/sign/img/qd_03.png" />
+
+                <br/>
+
+                <p style="color: #FEF2EE;">您已累计签到<b style="font-size: 1.2em;">{{entity.signDays}}</b>天，已领取<b style="font-size: 1.2em;">{{entity.totalReward}}</b>元抵现红包</p>
+
+                <br/>
+
+                <div class="list">
+
+                    <aside class="div_th" ng-repeat="item in details">
+
+                        <div class="div_th_od">
+
+                            <img src="/m/sign/img/c.png" alt="">
+
+                        </div>
+
+                        <div class="div_th_td">
+
+                            <div class="div_th_td">
+
+                                <p>{{item.signDate}}</p>
+
+                            </div>
+
+                            <div class="div_th_th">
+
+                                <p>+{{item.reward}}</p>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+                    <div ng-if="currentPage<totalPageCount" class="more" ng-click="loadMore()">加载更多投资记录
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div ui-content-for="modals">
+
+                <div ng-include="'/m/sign/common.html'"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

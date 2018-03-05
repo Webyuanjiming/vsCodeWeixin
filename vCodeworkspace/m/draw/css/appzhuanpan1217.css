@@ -1,0 +1,209 @@
+/* Create By w8  2015/12/17*/
+/* author:YuanJiMing */
+/* all css is here control!*/
+/* html is here!*/
+
+@charset "UTF-8";
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    font-family: Hiragino Sans GB, Arial, Helvetica,sans-serif;
+    font-size: 14px;
+    color: #878787;
+    max-width: 640px;
+    height: 100%;
+    background: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+}
+.page-header{width: 100%;height:250px;background: url("../img/t001.png");}
+
+.page_h1{background-size:100% 100%;background-repeat: no-repeat;}
+
+
+.img_page_1
+{
+    background: url("../img/draw.png");
+}
+.page_ball
+{
+    background: url("../img/back017.png");
+}
+.page_abo
+{
+    background-size:100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.page_aci
+{
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.page_border
+{
+    width: 100%;
+    height: 420px;
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    outline: none;
+    border: none;
+    background-color: #280D3A;
+}
+.page_1
+{
+    width: 85%;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+    top:10%;
+    outline: none;
+    border: none;
+}
+
+.tc-b-text
+{
+    font-family: "微软雅黑";
+    font-size:14px;
+    position:absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+    left: 0;
+    color: #FFF;
+}
+
+
+.img_page_two
+{
+    background: url("../img/rotate-static.png");
+}
+
+
+.page_2
+{
+    width: 155px;
+    height: 155px;
+    position: relative;
+    margin: 0 auto;
+    top: 73px;
+    left: 2px;
+    outline: none;
+    border: none;
+}
+
+
+.page_act
+{
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.page_tw
+{
+    width: 100%;
+    /*height: 100%;*/
+    overflow: hidden;
+    background-color: #280D3A;
+    padding-bottom: 20px;
+}
+
+.h-img{margin: 0 auto;background: url("../img/h001.png");font-size:14px;font-family: "微软雅黑";line-height:63px;color: #FFF;text-align: center;  width: 200px;height: 50px;background-repeat: no-repeat;background-size: 100% 100%;}
+.g-text01{width: 320px;margin: 0 auto;}
+.g-text01 p{
+    font-size: 16px;
+    color: #FFF;
+    font-family: "微软雅黑";
+    line-height: 22px;
+    text-indent: 2px;
+    margin-left: 10px;
+}
+
+.g-back00{
+    margin: 20px 2.5%;
+    background-color: #FEC536;
+    position: relative;
+    float: left;
+    width: 95%;
+    top: 0;
+}
+
+.g-back00 .tc-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    top: 0;
+    text-align: center;
+}
+
+.g-back00  .tc-text01{
+    height: 200px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.g-back00  .tc-text01 ul li {
+    float: left;
+    list-style: none;
+    width: 95%;
+    margin: 0 2.5%;
+    border-bottom: 1px dotted #E2E1E1;
+}
+.g-back00  .tc-text01 ul li>div {
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    line-height:24px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.btn-bottom {
+    width: 156px;
+    height: 43px;
+    background: url("../img/bton.png");
+    background-size: cover;
+    margin-top: 30px;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-bottom: 33px solid #FFD775;
+    border-left: 100px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.page-do01
+{
+    width: 100%;
+}
+.page-do01 p
+{
+    text-align: center;
+    font-size: 12px;
+    line-height:24px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.page-do01 p img.dog001
+{
+    width: 200px;
+    height: 30px;
+}
+.page-do01 p img.dog002
+{
+    width: 100%;
+}
