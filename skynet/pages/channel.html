@@ -1,0 +1,38 @@
+<div ng-init="queryData();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="refreshReport();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <!--输入框-->
+                <div class="mr">
+                    <label class="font-x  px-i0">渠道名称:</label> 
+                    <input class="emb form-control" ng-model="channelName" />
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns">
+            <!-- 搜索-->
+            <button class="eii btn btn-primary" ng-click="queryData();">搜索</button>
+            <!-- 添加-->
+            <button class="eii btn btn-primary" ng-click="addData();">添加</button>         
+        </div>
+    </div>
+    <div class="reportCont">
+        <h3 class="title">渠道管理列表</h3>
+        <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+        <table ng-table="channel.tableParams" class="reportTable table-striped table table-bordered">
+            <tr ng-repeat="item in list">
+                <td data-title="'序号'">{{((currentPage-1)*curPerPage)+($index+1)}}</td>
+                <td data-title="'渠道标识'">{{item.code}}</td>
+                <td data-title="'渠道名称'">{{item.name}}</td>
+                <td data-title="'地址'">{{item.address}}</td>
+                <td data-title="'联系人'">{{item.contact}}</td>
+                <td data-title="'手机'">{{item.mobile}}</td>
+                <td data-title="'固话'">{{item.fixedphone}}</td>
+                <td data-title="'接口负责人'">{{item.director}}</td>
+                <td data-title="'操作'" width="80"><a class="operate" ng-click="editData(item.id)">修改</a><a class="operate" ng-click="deleteData(item.id);">删除</a></td>
+            </tr>
+        </table>       
+    </div>   
+</div>

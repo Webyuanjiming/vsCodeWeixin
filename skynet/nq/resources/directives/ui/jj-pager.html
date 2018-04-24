@@ -1,0 +1,20 @@
+<ul class="jj-pagination">
+	<li ng-click="firstPage()"><span>&lt;&lt;</span></li>
+	<li ng-click="prevPage()"><span>&lt;</span></li>	
+	<li ng-show="state.range.min > 1">
+      <span ng-click="firstPage()">1...</span>
+    </li>
+    <li ng-repeat="page in state.pages" ng-class="{ true: 'active' }[page.current]">
+      <span ng-click="gotoPage(page.index)" ng-bind="page.index"></span>
+    </li>
+    <li ng-show="state.range.max < state.totalPages">
+    <span ng-click="lastPage()">...<em ng-bind="state.totalPages"></em></span>
+    </li>
+	<li ng-click="nextPage()"><span>&gt;</span></li>	
+	<li ng-click="lastPage()"><span>&gt;&gt;</span></li>	
+	<div class="pageInfos">
+		<span class="pagerCont">
+			第<span ng-bind="state.currentPageInfo"></span>条&nbsp;/&nbsp;共<span ng-bind="state.totalPages"></span>页 &nbsp;
+		</span>
+	</div>
+</ul>

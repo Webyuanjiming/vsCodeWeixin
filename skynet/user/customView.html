@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>河南聚金资本金融股份有限公司-客户视图</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/skynet/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/skynet/css/yunlanmu.css">
+    <link rel="stylesheet" type="text/css" href="/skynet/user/user.css">
+</head>
+<body ng-app="viewApp" ng-controller="viewController">
+    <div class="titlt_cont">
+        <!-- <p class="user_icon"></p> -->
+        <p><span class="name" ng-bind="dv_user.realName || dv_user.nickName"></span><a ng-click="editRemark();">编辑</a></p>
+        <div class="view-tag">
+            <p>
+                <a ng-repeat="item in curTaglist" tool-tip-tag tip-item="item" ng-style="{color:'{{item.tag.fontColor}}','border-color':'{{item.tag.color}}'}" >
+                    <span ng-bind="item.tag.labelCn"></span>
+                    <span class="del_icon" ng-click="delTag(item.tag.id,$index)"></span>
+                </a>
+            </p>
+        </div>
+        <a ng-click="addTag();" title="新增标签" class="add_icon"></a>
+    </div>
+    <div class="view_cont" id="user" name="user">
+        <div class="view_hd">
+            <span class="title">用户基础数据</span>
+            <span class="up" ng-show="isFoldUser" ng-click="changeStatus('isFoldUser');"></span>
+            <span class="down" ng-show="!isFoldUser" ng-click="changeStatus('isFoldUser');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldUser">
+            <table class="table table-bordered table-hover">
+                <tr><td class="td_label td_width1"><span jj-tooltip tip-title="dv_user_memo.userId"></span>用户名:</td><td ng-bind="dv_user.userId"></td>
+                    <td class="td_label td_width1"><span jj-tooltip tip-title="dv_user_memo.realName"></span>真实姓名:</td><td ng-bind="dv_user.realName"></td>
+                    <td class="td_label td_width3"><span jj-tooltip tip-title="dv_user_memo.phoneNumber"></span>手机号:</td><td ng-bind="dv_user.phoneNumber"></td>
+                    <td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_memo.email"></span>邮箱:<span ng-show="dv_user.emailVerifyFlg==1" title="已认证" class="verify_icon"></span></td><td ng-bind="dv_user.email"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.qq"></span>QQ:</td><td ng-bind="dv_user.qq"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.weChat"></span>微信:</td><td ng-bind="dv_user.weChat"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.realVerifyDate"></span>实名时间:<span ng-show="dv_user.emailVerifyFlg==1" title="已认证" class="verify_icon"></span></td><td ng-bind="dv_user.realVerifyDate"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneVerifyDate"></span>手机认证时间:<span ng-show="dv_user.phoneVerifyFlg==1" title="已认证" class="verify_icon"></span></td><td ng-bind="dv_user.phoneVerifyDate"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.registerDate"></span>注册时间:</td><td ng-bind="dv_user.registerDate"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.firstTenderTime"></span>投资时间:</td><td ng-bind="dv_user_tender.firstTenderTime"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.transDate"></span>转化周期:</td><td ng-bind="dv_user.transDate"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.endDate"></span>VIP有效期:</td><td ng-bind="dv_user.endDate"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.birthDay"></span>生日:</td><td ng-bind="dv_user.birthDay"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.cardId"></span>身份证号:</td><td ng-bind="dv_user.cardId"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.bankCardId"></span>银行卡号:</td><td ng-bind="dv_user.bankCardId"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.bankName"></span>开户行:</td><td ng-bind="dv_user.bankName"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.friendsUserId"></span>推荐人:</td><td ng-bind="dv_user.firendsUserId"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.kefu"></span>客服人员:</td><td ng-bind="dv_user.kefu"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.channelName"></span>渠道:</td><td ng-bind="dv_user.channelName"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.bindChannelDate"></span>绑定时间:</td><td ng-bind="dv_user.bindChannelDate"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.vipLevel"></span>VIP级别:</td><td ng-bind="dv_user.vipLevel"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneSpec"></span>手机:</td><td ng-bind="dv_user.phoneSpec"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.appVersion"></span>型号:<span class="warn_icon" title="未使用最新版本" ng-show="dv_user.appVersion<dv_user.lastVersion"></span></td><td colspan="3">{{dv_user.appVersion}} <span ng-if="dv_user.appVersion<dv_user.lastVersion">最新版本:{{dv_user.lastVersion}}</span><span ng-if="dv_user.appVersion>=dv_user.lastVersion">已是最新版本</span>
+					</td>
+                    </tr>
+                <tr>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneNumber1"></span>手机号1:</td>
+                    <td ng-bind="dv_user.phoneNumber1"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneNumber2"></span>手机号2:</td>
+                    <td ng-bind="dv_user.phoneNumber2"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneNumber3"></span>手机号3:</td>
+                    <td ng-bind="dv_user.phoneNumber3"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_memo.phoneNumber4"></span>手机号4:</td>
+                    <td ng-bind="dv_user.phoneNumber4"></td>
+                </tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_memo.location"></span>位置:</td>
+                    <td colspan="7" ng-bind="dv_user.location"></td></tr>
+                <tr><td class="td_label" style="vertical-align: middle;"><span jj-tooltip tip-title="dv_user_memo.memo1"></span>备注:</td>
+                <td colspan="7">
+                    <p ng-repeat = "item in memolist" style="margin: 5px 0px;">
+                        <span ng-bind="item"></span>
+                    </p>
+                </td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="view_cont" id="call" name="call">
+        <div class="view_hd">
+            <span class="title">拨打记录</span>
+            <span class="up" ng-show="isFoldCall" ng-click="changeStatus('isFoldCall');"></span>
+            <span class="down" ng-show="!isFoldCall" ng-click="changeStatus('isFoldCall');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldCall">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <td class="td_label td_width2">初次拨打时间:</td><td class="td_width4" ng-bind="dv_hion_customer.firstCallTime"></td>
+                    <td class="td_label td_width2">最近拨打时间:</td><td class="td_width4" ng-bind="dv_hion_customer.lastContactTime"></td>
+                    <td class="td_label td_width2">拨打次数(次):</td><td ng-bind="dv_hion_record.length"></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <table class="table">
+                            <tr ng-repeat = "item in hion_remarks">
+                                <td ng-bind="item"  style="border-top: none;padding: 8px 0;"></td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered table-hover" style="border: 1px solid #ddd;">
+                            <thead>
+                                <tr><th class="txt-center">客服</th>
+                                    <th class="txt-center">呼入/呼出</th>
+                                    <th class="txt-center">开始时间</th>
+                                    <th class="txt-center">结束时间</th>
+                                    <th class="txt-center">时长</th>
+                                    <th class="txt-center">内容</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in dv_hion_record">
+                                    <td ng-bind="item.staffName" class="txt-center"></td>
+                                    <td ng-bind="item.recordType|callType" class="txt-center"></td>
+                                    <td ng-bind="item.startTime" class="txt-center"></td>
+                                    <td ng-bind="item.endTime" class="txt-center"></td>
+                                    <td ng-bind="item|timeMinus" class="txt-center"></td>
+                                    <td ng-bind="item.callResult" class="txt-center"></td>
+                                </tr> 
+                            </tbody>
+                            <tfoot ng-if="dv_hion_record.length == 0">
+                                <tr height="120">
+                                    <td colspan="6" class="nodata">无拨打记录</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="view_cont" id="tender" name="tender">
+        <div class="view_hd">
+            <span class="title">投资行为数据</span>
+            <span class="up" ng-show="isFoldTender" ng-click="changeStatus('isFoldTender');"></span>
+            <span class="down" ng-show="!isFoldTender" ng-click="changeStatus('isFoldTender');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldTender">
+            <table class="table table-bordered table-hover">
+                <tr><td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_tender_memo.firstTenderTime"></span>首投时间:</td><td ng-bind="dv_user_tender.firstTenderTime"></td>
+                    <td class="td_label td_width6"><span jj-tooltip tip-title="dv_user_tender_memo.firstTenderAccount"></span>首投金额(￥):</td><td ng-bind="dv_user_tender.firstTenderAccount"></td>
+                    <td class="td_label td_width5"><span jj-tooltip tip-title="dv_user_tender_memo.firstTenderBorrow"></span>首投标的:</td><td><a href="https://www.jujinziben.com/borrowinfo.page?borrow_id={{dv_user_tender.firstTenderBorrow}}" target="_blank">{{dv_user_tender.firstTenderBorrowTitle}}</a></td>
+                    <td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_tender_memo.firstPeriodType"></span>首投周期({{dv_user_tender.firstPeriodType=="1"?"月":"天"}}):</td><td ng-bind="dv_user_tender.firstTenderPeriod"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.lastTenderTime"></span>尾投时间:</td><td ng-bind="dv_user_tender.lastTenderTime"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.lastTenderAccount"></span>尾投金额(￥):</td><td ng-bind="dv_user_tender.lastTenderAccount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.lastTenderBorrow"></span>尾投标的:</td><td><a href="https://www.jujinziben.com/borrowinfo.page?borrow_id={{dv_user_tender.lastTenderBorrow}}" target="_blank">{{dv_user_tender.lastTenderBorrowTitle}}</a></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.lastPeriodType"></span>尾投周期({{dv_user_tender.lastPeriodType=="1"?"月":"天"}}):</td><td ng-bind="dv_user_tender.lastTenderPeriod"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.topAwait"></span>峰值待收(￥):</td><td ng-bind="dv_user_tender.topAwait"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.topAwaitDate"></span>峰值日期:</td><td ng-bind="dv_user_tender.topAwaitDate"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.bottomAwait"></span>谷底待收(￥):</td><td ng-bind="dv_user_tender.bottomAwait"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.bottomAwaitDate"></span>谷底日期:</td><td ng-bind="dv_user_tender.bottomAwaitDate"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.rechargeTotal"></span>充值额度(￥):</td><td ng-bind="dv_user_tender.rechargeTotal" colspan="3"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.cashTotal"></span>提现额度(￥):</td><td ng-bind="dv_user_tender.cashTotal" colspan="3"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderTotal"></span>总投资金额(￥):</td><td ng-bind="dv_user_tender.tenderTotal"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderInterestTotal"></span>总投资收益(￥):</td><td ng-bind="dv_user_tender.tenderInterestTotal"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderAddAccountTotal"></span>加息金额(￥):</td><td ng-bind="dv_user_tender.tenderAddAccountTotal"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderCoinTotal"></span>红包金额(￥):</td><td ng-bind="dv_user_tender.tenderCoinTotal"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.recoverManagementAmount"></span>利息管理费(￥):</td><td ng-bind="dv_user_tender.recoverManagementAmount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.continueCcount"></span>回款续投次数:</td><td ng-bind="dv_user_tender.continueCcount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.continueAmount"></span>回款续投金额(￥):</td><td ng-bind="dv_user_tender.continueAmount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.continueReward"></span>回款续投奖励(￥):</td><td ng-bind="dv_user_tender.continueReward"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderCount"></span>投资次数:</td><td ng-bind="dv_user_tender.tenderCount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.mobileTenderCount"></span>移动端投资次数:</td><td ng-bind="dv_user_tender.mobileTenderCount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.autoTenderCount"></span>自动投资次数:</td><td ng-bind="dv_user_tender.autoTenderCount"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.avgTrenderAccount"></span>笔均投资额:</td><td ng-bind="dv_user_tender.avgTrenderAccount"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.maxAccountOneBorrow"></span>单标最大投资(￥):</td><td ng-bind="dv_user_tender.maxAccountOneBorrow"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.maxTenderCountOneBorrow"></span>单标最多次数:</td><td ng-bind="dv_user_tender.maxTenderCountOneBorrow"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.autoTenderTotal"></span>自动投标投资额(￥):</td><td ng-bind="dv_user_tender.autoTenderTotal"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.avgAutoTrenderAccount"></span>自动投标均额(￥):</td><td ng-bind="dv_user_tender.avgAutoTrenderAccount"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.frequency"></span>次数分布:</td><td colspan="7" ng-bind="dv_user_tender.frequency"></td></tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_tender_memo.tenderSummary"></span>期限偏好:</td><td colspan="7" ng-bind="dv_user_tender.tenderSummary"></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="view_cont" id="account" name="account">
+        <div class="view_hd">           
+            <span class="title">用户资金</span>
+            <span class="up" ng-show="isFoldAccount" ng-click="changeStatus('isFoldAccount');"></span>
+            <span class="down" ng-show="!isFoldAccount" ng-click="changeStatus('isFoldAccount');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldAccount">
+            <table class="table table-bordered table-hover">
+                <tr><td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_account_memo.capitalTotal"></span>总金额(￥):</td><td ng-bind="dv_user_account.capitalTotal"></td>
+                    <td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_account_memo.balance"></span>可用余额(￥):</td><td ng-bind="dv_user_account.balance"></td>
+                    <td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_account_memo.frost"></span>冻结金额(￥):</td><td ng-bind="dv_user_account.frost"></td>
+                    <td class="td_label td_width2"><span jj-tooltip tip-title="dv_user_account_memo.await"></span>待收金额(￥):</td><td ng-bind="dv_user_account.await"></td>
+                </tr>
+                <tr><td class="td_label"><span jj-tooltip tip-title="dv_user_account_memo.continueTotal"></span>回款续投(￥):</td><td ng-bind="dv_user_account.continueTotal"></td>
+                    <td class="td_label"><span jj-tooltip tip-title="dv_user_account_memo.coin"></span>抵现红包(￥):</td><td ng-bind="dv_user_account.coin" colspan="5"></td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="view_cont" ng-class="{true:'mb50'}[!showKefu]" id="ticket" name="ticket">
+        <div class="view_hd">           
+            <span class="title">加息券</span>
+            <span class="up" ng-show="isFoldTicket" ng-click="changeStatus('isFoldTicket');"></span>
+            <span class="down" ng-show="!isFoldTicket" ng-click="changeStatus('isFoldTicket');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldTicket">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr><th class="txt-center">加息券名称</th>
+                        <th class="txt-center">年化加息值(%)</th>
+                        <th class="txt-center">数量</th>
+                        <th class="txt-center">有效期</th></tr>
+                </thead>
+                <tbody>
+                   <tr ng-repeat="item in dv_user_ticket">
+                        <td ng-bind="item.ticketName" class="txt-center"></td>
+                        <td ng-bind="item.ticketValue" class="txt-center"></td>
+                        <td ng-bind="item.ticketCount" class="txt-center"></td>
+                        <td ng-bind="item.endDate" class="txt-center"></td>
+                    </tr> 
+                </tbody> 
+                <tfoot ng-if="dv_user_ticket.length == 0">
+                    <tr height="120">
+                        <td colspan="4" class="nodata">无加息券信息</td>
+                    </tr>
+                </tfoot>               
+            </table>
+        </div>
+    </div>
+    <div class="view_cont" ng-if="showKefu" id="kefulist" name="kefulist">
+        <div class="view_hd">           
+            <span class="title">客服列表</span>
+            <span class="up" ng-show="isFoldKefu" ng-click="changeStatus('isFoldKefu');"></span>
+            <span class="down" ng-show="!isFoldKefu" ng-click="changeStatus('isFoldKefu');"></span>
+        </div>
+        <div class="view_bd" ng-show="!isFoldKefu">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr><th class="txt-center">客服名称</th>
+                        <th class="txt-center">开始时间</th>
+                        <th class="txt-center">结束时间</th></tr>
+                </thead>
+                <tbody>
+                   <tr ng-repeat="item in kefulist">
+                        <td ng-bind="item.KEFUID" class="txt-center"></td>
+                        <td ng-bind="item.BEGINDAY" class="txt-center"></td>
+                        <td ng-bind="item.ENDDAY" class="txt-center"></td>
+                    </tr> 
+                </tbody> 
+                <tfoot ng-if="kefulist.length == 0">
+                    <tr height="120">
+                        <td colspan="4" class="nodata">无客服信息</td>
+                    </tr>
+                </tfoot>               
+            </table>
+        </div>
+    </div>
+    <div class="view_cont"  ng-class="{true:'mbtns'}[showKefu]"  ng-if="showKefu">
+        <button class="btn btn-primary" style="margin-right:20px;"  ng-if="isManager != 1 && showNext" ng-click="handleTask();">下次处理时间</button>
+        <button class="btn btn-primary" style="margin-right:20px;" ng-click="giveUp();" ng-if="isManager != 1 && showNext">放弃</button>
+        <button class="btn btn-primary" style="margin-right:20px;" ng-click="assignKefu();" ng-if="isManager == 1 && !hasKefu">分配客服</button>
+        <button class="btn btn-primary" ng-click="takeBackKefu();" ng-if="isManager == 1 && hasKefu">收回</button>
+    </div>
+    <div class="fixedtool">
+        <a href="#user" title="用户基础数据">
+            <span>基础<br/>数据</span>
+        </a>
+        <a href="#call" title="拨打记录">
+            <span>拨打<br/>记录</span>
+        </a>
+        <a href="#tender" title="投资行为数据">
+            <span>投资<br/>行为</span>
+        </a>
+        <a href="#account" title="用户资金">
+            <span>用户<br/>资金</span>
+        </a>
+        <a href="#ticket" title="加息券">
+            <span>加息<br/>券</span>
+        </a>
+        <a href="#kefulist" title="客服列表" ng-if="showKefu">
+            <span>客服<br/>列表</span>
+        </a>
+        <a href="javascript:scrollTo(0,0);">
+            <span>返回<br/>顶部</span>
+        </a>
+    </div>
+    <div growl></div>
+<script type="text/javascript" src="/skynet/js/jquery.min.js"></script>
+<script type="text/javascript" src="/skynet/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/skynet/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="/skynet/js/ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="/skynet/js/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="/skynet/js/angular-growl/angular-growl.min.js"></script>
+<script type="text/javascript" src="/skynet/js/angular/angular-locale_zh-cn.js"></script>
+<script type="text/javascript" src="/skynet/js/angular/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="/skynet/js/jujin/toolKit.js"></script>
+<script type="text/javascript" src="/skynet/user/customView.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var tmpArray = new Array();
+        var click = false;
+        $(window).scroll(function () {
+            var scroll_len = $(window).scrollTop();
+            var wTop = $(window).scrollTop();
+            if (wTop) {
+                var sections = $(".view_cont");
+                for (var i = 0, len = sections.length; i < len; i++) {
+                    var top = sections.eq(i).offset().top;
+                    tmpArray[i] = Math.abs(wTop - top);
+                }
+                var tmpValue = Math.min.apply(null, tmpArray)
+                var index = 0;
+                if (typeof tmpArray.indexOf == "function") {
+                    index = tmpArray.indexOf(tmpValue);
+                } else {
+                    for (var j = 0, len = tmpArray.length; j < len; j++) {
+                        if (tmpArray[j] == tmpValue) {
+                            index = j;
+                            break;
+                        }
+                    }
+                }
+                if(!click){
+                    $(".fixedtool a").removeClass("on");
+                    $(".fixedtool a").eq(index).addClass("on");
+                }else{
+                    click = false;
+                }                
+            }
+        });
+        $(".fixedtool span").click(function(){
+            click = true;
+            $(".fixedtool a").removeClass("on");
+            $(this).parent("a").addClass("on");
+        });
+    })   
+</script>
+</body>
+</html>

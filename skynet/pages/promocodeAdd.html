@@ -1,0 +1,46 @@
+<form name="form">
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>兑换物品：</label>
+        <select name="goods" required class="form-control w178" ng-model="formData.goods" ng-change="changeGoods();" ng-options="node.id as node.name for node in goods">
+            
+        </select>
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>口令类型：</label>
+        <select name="type" required class="form-control w178" ng-model="formData.type" ng-options="node.id as node.name for node in comdType">
+        </select>
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>渠道：</label>
+        <select name="channel" required class="form-control w178" ng-model="formData.channel_id" ng-options="node.code as node.name for node in channels">
+        </select>
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>口令有效期：</label>
+        <input name="code_expirydate" class="editbox4 form-control Wdate w178" size="12" type="text" ng-model="formData.code_expirydate" onfocus="WdatePicker({readOnly:true})" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>生成数量：</label>
+        <input name="num" required type="number" ng-model="formData.num" class="form-control awidth"/>
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>活动：</label>
+        <select name="type" required class="form-control w178" ng-model="formData.activity_id" ng-options="node.activity_id as node.name for node in activities">
+        </select>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.type.$dirty && form.type.$invalid">
+        <span ng-show="form.type.$error.required" class="text-danger">口令类型为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.channel.$dirty && form.channel.$invalid">
+        <span ng-show="form.channel.$error.required" class="text-danger">渠道为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="no_code_expirydate">
+        <span class="text-danger">口令有效期为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.goods.$dirty && form.goods.$invalid">
+        <span ng-show="form.goods.$error.required" class="text-danger">兑换物品为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.num.$dirty && form.num.$invalid">
+        <span ng-show="form.num.$error.required" class="text-danger">生成数量为必填项。</span>
+    </div>
+</form>         

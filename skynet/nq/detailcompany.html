@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="edge"/>
+    <title>【聚金资本官网】P2P理财网贷专业网站平台_个人p2p投资理财平台_互联网金融P2CN三板贷平台</title>
+    <meta name="Keywords" content="聚金资本，投资理财，p2p理财，投资理财平台，个人理财，p2p平台，p2p网贷，互联网理财，p2p投资理财，p2p网站，p2p投资理财平台"/>
+    <meta name="Description" content="聚金资本是河南互联网金融协会会长单位提供互联网投融资服务，安全可靠的P2P理财投资网贷专业网站，个人理财投资p2p网贷平台50元起投，互联网理财p2p网贷平台哪个好？p2p网贷服务第一品牌聚金资本"/>
+    <link rel="shortcut icon" href="https://www.jujinziben.com/web/cn/favicon.ico">
+    <link rel="stylesheet" href="css/workCss.css" media="screen" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="libs/js/angular.min.js"></script>
+    <script type="text/javascript" src="libs/js/work.js"></script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="workCtrl" class="workAll">
+        <div class="line">
+            <div class="line_re2"></div>
+        </div>
+        <div class="com_message">
+            <div class="minitab">
+                <ul>
+                    <li class="sur1 cur" ng-click="changeTab('1');">
+                        <a>
+                            <span>公司概况</span>
+                        </a>
+                    </li>
+                    <li class="sur2" ng-click="changeTab('2');">
+                        <a>
+                            <span>高管人员</span>
+                        </a>
+                    </li>
+                    <li class="sur3" ng-click="changeTab('3');">
+                        <a>
+                            <span>十大股东</span>
+                        </a>
+                    </li>
+                    <li class="sur4" ng-click="changeTab('4');">
+                        <a>
+                            <span>财务指标</span>
+                        </a>
+                    </li>
+                    <li class="sur5" ng-click="changeTab('5');">
+                        <a>
+                            <span>公司公告</span>
+                        </a>
+                    </li>
+                    <li class="sur6" ng-click="changeTab('6');">
+                        <a>
+                            <span>个股行情</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mask_bak" ng-show="maskBak">
+                <div class="bak-try">
+                    <img src="images/loading.gif"/>
+                </div>
+            </div>
+            <div class="list_l" ng-if="isTable=='1'">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td width="130px" class="gray">公司全称：</td>
+                            <td>{{baseinfos.name}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司代码：</td>
+                            <td>{{baseinfos.code}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">英文名称：</td>
+                            <td>{{baseinfos.englishName}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司简称：</td>
+                            <td>{{baseinfos.shortname}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">注册地址：</td>
+                            <td>{{baseinfos.address}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">法人代表：</td>
+                            <td>{{baseinfos.legalRepresentative}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司董秘：</td>
+                            <td>{{baseinfos.secretaries}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">行业分类：</td>
+                            <td>{{baseinfos.industry}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">挂牌日期：</td>
+                            <td>{{baseinfos.listingDate}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">总股本：</td>
+                            <td>{{baseinfos.totalStockEquity}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">邮政编码：</td>
+                           <!-- <td>{{baseinfos.postcode=='null'?0:baseinfos.postcode}}</td>-->
+                            <td>{{baseinfos.postcode}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司电话：</td>
+                            <td>{{baseinfos.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司传真：</td>
+                            <td>{{baseinfos.fax}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">公司网址：</td>
+                            <td>{{baseinfos.website}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">主办券商：</td>
+                            <td>{{baseinfos.broker}}</td>
+                        </tr>
+                        <tr>
+                            <td class="gray">转让方式：</td>
+                            <td>{{baseinfos.transferMode}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="list_l" ng-if="isTable=='2'">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr ng-repeat="ves in executive">
+                            <td width="230px" class="gray">{{ves.job}}</td>
+                            <td>{{ves.name}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="list_l" ng-if="isTable=='3'">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="gpqk" style="border-top:none;">
+                    <thead>
+                    <tr>
+                        <th width="20%">截止日期</th>
+                        <th width="40%">股东名称</th>
+                        <th width="15%">持股数</th>
+                        <th width="25%">持股比例(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="tds in tolds">
+                            <td>{{tds.date}}</td>
+                            <td>{{tds.name}}</td>
+                            <td>{{tds.quantity}}</td>
+                            <td>{{(tds.ratio*100).toFixed(2)}}%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="list_l" ng-if="isTable=='4'">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td width="180px" class="gray">营业收入（元）：</td>
+                        <td align="center">{{finances.income}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">营业利润（元）：</td>
+                        <td align="center">{{finances.profit}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">净利润（元）：</td>
+                        <td align="center">{{finances.netProfit}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">未分配利润（元）：</td>
+                        <td align="center">{{finances.nonDistributefprofit}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">总资产（元）：</td>
+                        <td align="center">{{finances.totalAssets}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">总负债（元）：</td>
+                        <td align="center">{{finances.totalLiability}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">净资产（元）：</td>
+                        <td align="center">{{finances.netAssets}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">每股收益（元）：</td>
+                        <td align="center">{{finances.earningsPerShare}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">每股净资产（元）：</td>
+                        <td align="center">{{finances.netAssetsPerShare}}</td>
+                    </tr>
+                    <tr>
+                        <td class="gray">净资产收益率（%）：</td>
+                        <td align="center">{{(finances.netAssetsYield*100).toFixed(2)}}%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div class="list_l" ng-if="isTable=='5'">
+            <div class="list">
+                <table width='100%' border='0' cellpadding='0' cellspacing='0' class="mytable">
+                    <tr><th width='100'>代码</th><th class='tc' width='520'>标题</th><th>日期</th></tr>
+                    <tbody>
+                        <tr ng-repeat="result in resultList">
+                            <td>
+                                <font ng-class="{true:'innovation_ico',false:'base_ico'}[isIcon]">{{result.companyCd}}</font>
+                            </td>
+                            <td class="tl">
+                                <a target="_blank" href="http://www.neeq.com.cn{{result.destFilePath}}">
+                                    <em>{{result.disclosureTitle}}</em>
+                                    <img src="images/wpic1.png">
+                                </a>
+                            </td>
+                            <td>{{result.publishDate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div jj-pager pager-info="detailPager" showpagenum="20" on-page-change="cagPage(pager)" style="margin-top: 20px;float: right;margin-bottom: 20px;"></div>
+        </div>
+        <div class="list_l" ng-if="isTable=='6'">
+            <div class="quotation fix">
+                <div class="name">
+                    <p>
+                        <span>{{personDetails.hqzqjc}}</span>
+                    </p>
+                    <p>
+                        股份代码：<span>{{personDetails.hqzqdm}}</span>
+                    </p>
+                </div>
+                <div class="time" style="width:190px;">{{yearsDetails}}个股行情</div>
+            </div>
+            <div class="list quolist">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr class="th2">
+                        <th>转让方式</th>
+                        <th class="tc">前收盘价<br><span>(元股)</span></th>
+                        <th class="tc">最近成交价<br><span>(元股)</span></th>
+                        <th class="tc">当日最高价<br><span>(元股)</span></th>
+                        <th class="tc">当日最低价<br><span>(元股)</span></th>
+                        <th class="tc">当日累计成交<br><span>金额(万元)</span></th>
+                        <th class="tc">涨跌</th><th class="tc">涨跌幅</th>
+                        <th class="tc">申报明细</th><th>成交明细</th>
+                    </tr>
+                    <tr>
+                        <td>协议</td>
+                        <td class="tc" ng-bind="personDetails.hqzrsp.toFixed(2)"></td>
+                        <td class="tc" ng-bind="personDetails.hqzjcj.toFixed(2)"></td>
+                        <td class="tc" ng-bind="personDetails.hqzgcj.toFixed(2)"></td>
+                        <td class="tc" ng-bind="personDetails.hqzdcj.toFixed(2)"></td>
+                        <td class="tc" ng-bind="((personDetails.hqcjje/10000*100)/100).toFixed(2)"></td>
+                        <td class="tc"><b style="color:red" ng-bind="personDetails.hqzd.toFixed(2)"></b></td>
+                        <td class="tc"><b style="color:red" ng-bind="personDetails.hqzdf.toFixed(2)"></b>%</td>
+                        <td class="tc"><a class="abtn1" target="_blank" href="http://www.neeq.com.cn/nq/declare.html?companyCode=430002&amp;companyName=%25E4%25B8%25AD%2520%25E7%25A7%2591%2520%25E8%25BD%25AF&amp;typename=G&amp;zrlx=%E5%8D%8F%E8%AE%AE">查看</a></td>
+                        <td><a class="abtn2" target="_blank" href="http://www.neeq.com.cn/nq/transaction.html?companyCode=430002&amp;companyName=%25E4%25B8%25AD%2520%25E7%25A7%2591%2520%25E8%25BD%25AF&amp;typename=G&amp;zrlx=%E5%8D%8F%E8%AE%AE">查看</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="price fix">
+                <div class="cont">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <th></th>
+                            <th>申报价格</th>
+                            <th>数量</th>
+                        </tr>
+                        <tr class="c1">
+                            <td>卖五</td>
+                            <td ng-bind="personDetails.hqsjw5.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqssl5"></td>
+                        </tr>
+                        <tr class="c2">
+                            <td>卖四</td>
+                            <td ng-bind="personDetails.hqsjw4.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqssl4"></td>
+                        </tr>
+                        <tr class="c1">
+                            <td>卖三</td>
+                            <td ng-bind="personDetails.hqsjw3.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqssl3">0</td>
+                        </tr>
+                        <tr class="c2">
+                            <td>卖二</td>
+                            <td ng-bind="personDetails.hqsjw2.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqssl2"></td>
+                        </tr>
+                        <tr class="c1">
+                            <td>卖一</td>
+                            <td ng-bind="personDetails.hqsjw1.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqssl1"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cont">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                        <tr>
+                            <th></th>
+                            <th>申报价格</th>
+                            <th>数量</th>
+                        </tr>
+                        <tr class="c1">
+                            <td>买一</td>
+                            <td ng-bind="personDetails.hqbjw1.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqbsl1"></td>
+                        </tr>
+                        <tr class="c2">
+                            <td>买二</td>
+                            <td ng-bind="personDetails.hqbjw2.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqbsl2"></td>
+                        </tr>
+                        <tr class="c1">
+                            <td>买三</td>
+                            <td ng-bind="personDetails.hqbjw3.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqbsl3"></td>
+                        </tr>
+                        <tr class="c2">
+                            <td>买四</td>
+                            <td ng-bind="personDetails.hqbjw4.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqbsl4"></td>
+                        </tr>
+                        <tr class="c1">
+                            <td>买五</td>
+                            <td ng-bind="personDetails.hqbjw5.toFixed(2)"></td>
+                            <td ng-bind="personDetails.hqbsl5"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+ </div>
+</div>
+</body>
+<script>
+    /*<![CDATA[*/
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?8f1a760c5bc7050f6dafbb0e9bb78d2d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    /*]]>*/
+</script>
+</body>
+</html>

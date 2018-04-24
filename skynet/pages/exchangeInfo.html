@@ -1,0 +1,32 @@
+<form name="form">
+    <div class="col-sm-8 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>物品名称：</label>
+        <input type="text" required ng-maxlength="50" name="name" ng-model="formData.name" class="form-control awidth" />
+    </div>
+    <div class="col-sm-8 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>类型：</label>
+        <select name="type" required class="exc form-control awidth" ng-model="formData.type" 
+            ng-options="node.id as node.name for node in types">
+        </select>
+    </div>
+    <div class="col-sm-8 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>值：</label>
+        <input type="text" name="exchange" required ng-model="formData.value" class="form-control awidth" ng-if="formData.type!='2'&&formData.type!='3'"/>
+        <select name="exchange" required ng-model="formData.extend_id" class="exc form-control awidth" ng-if="formData.type=='2'">
+            <option ng-repeat="jxs in tickets" value="{{jxs.ticket_id}}">{{jxs.ticket_name}}</option>
+        </select>
+        <select name="exchange" required ng-model="formData.extend_id" class="exc form-control awidth" ng-if="formData.type=='3'">
+            <option ng-repeat="vip in vips" value="{{vip.vip_id}}">{{vip.vip_name}}</option>
+        </select>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.name.$dirty && form.name.$invalid">
+        <span ng-show="form.name.$error.required" class="text-danger">物品名称为必填项。</span>
+        <span ng-show="form.name.$error.maxlength" class="text-danger">物品名称最大长度为50。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.type.$dirty && form.type.$invalid">
+        <span ng-show="form.type.$error.required" class="text-danger">类型为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.exchange.$dirty && form.exchange.$invalid">
+        <span ng-show="form.exchange.$error.required" class="text-danger">值为必填项。</span>
+    </div>
+</form>         

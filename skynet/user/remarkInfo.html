@@ -1,0 +1,50 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" ng-click="close(false)" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">{{dialogTitle}}</h4>
+</div>
+<div class="modal-body row">
+    <form name="form" class="clearfix">
+        <div class="text-center-b"><span>基本信息</span></div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">用户名：</label>
+            <input type="text" ng-disabled="true" name="userId" ng-model="formData.userId" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">手机号1：</label>
+            <input type="text" name="phoneNumber1" ng-model="formData.phoneNumber1" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">手机号2：</label>
+            <input type="text" name="phoneNumber2" ng-model="formData.phoneNumber2" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">手机号3：</label>
+            <input type="text" name="phoneNumber3" ng-model="formData.phoneNumber3" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">手机号4：</label>
+            <input type="text" name="phoneNumber4" ng-model="formData.phoneNumber4" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">QQ：</label>
+            <input type="text" name="qq" ng-model="formData.qq" class="form-control awidth" />
+        </div>
+        <div class="col-sm-6 clearfix">
+            <label class="flabel">微信：</label>
+            <input type="text" ng-model="formData.weChat" name="weChat" class="form-control awidth" />
+        </div>
+        <div class="col-sm-12 clearfix">
+            <label class="flabel">备注：</label>
+            <textarea ng-model="formData.remark" name="remark" class="form-control" style="width: 84%;height: 100px;" />
+        </div>
+    </form> 
+    <p class="text-center mt10"><span ng-show="formData.insUserId">由{{formData.insUserId}}在{{formData.insDate}}添加</span><span ng-show="formData.updUserId">，由{{formData.updUserId}}在{{formData.updDate}}最新修改</span></p>
+    <!-- 加载中 -->
+    <div ng-show="loadingState" class="loading_bd">
+        <div class="loading"></div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="loadingState" ng-click="doAction(form)">确定</button>
+    <button class="btn btn-default" type="button" ng-click="close(false)">取消</button>
+</div>        

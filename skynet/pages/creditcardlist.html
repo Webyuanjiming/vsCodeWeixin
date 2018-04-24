@@ -1,0 +1,67 @@
+<div ng-init="proQuery();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="proQuery();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="order-manager">
+        订单管理&nbsp;/&nbsp;信用贷列表
+    </div>
+    <style>
+        .queryCont ul li{display: inline-block;
+            float: left;
+            list-style:none;
+        }
+        .queryBtns{
+            float:right;
+            margin-right:18px;
+        }
+    </style>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <!--下单时间-->
+                <div class="mr">
+                    <label class="font-x  px-i0">下单时间：</label>
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="startTime" id="start_time" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})" />
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x">&nbsp;&nbsp;至&nbsp;&nbsp;</label>
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="endTime" id="end_time" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})" />
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns">
+            <!--可输入账号/真实姓名-->
+            <div class="mr" style="width:auto;float:left;">
+                <input class="emb form-control" style="width:170px;position:relative;top:2px;" type="text" ng-model="keyword" placeholder="请输入账号/真实姓名"/>
+            </div>
+            <!--搜索-->
+            <button class="eii btn btn-primary" ng-click="proQuery();">搜索</button>
+            <!--导出-->
+            <button class="eii btn btn-primary" ng-click="proExport();">导出</button>
+        </div>
+    </div>
+    <div class="reportCont">
+            {{selected}}
+            <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+            <table ng-table="mortgageOrder.tableParams" class="reportTable table-striped table table-bordered">
+                <tr ng-repeat="item in list">
+                    <td header="'headerCheckbox.html'"><input type="checkbox" ng-model="item.selected" /></td>
+                    <td data-title="'订单id'">{{item.order_id}}</td>
+                    <td data-title="'订单号'">{{item.order_sn}}</td>
+                    <td data-title="'产品名称'">{{item.product_name}}</td>
+                    <td data-title="'姓名'">{{item.true_name}}</td>
+                    <td data-title="'手机号'">{{item.user_name}}</td>
+                    <td data-title="'下单时间'">{{item.create_date*1000|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td data-title="'订单状态'">{{item.order_status}}</td>
+                    <td data-title="'下单更新时间'">{{item.update_date*1000|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td data-title="'操作'" width="100"><a class="operate" ng-click="orderDetail(item.order_id)">编辑</a></td>
+                    <!--<td data-title="'操作'" width="60"><a class="operate" ng-click="proEdit(item.code)">修改</a></td>-->
+                </tr>
+            </table>
+    </div>
+</div>
+<!-- 全选复选框 -->
+<script type="text/ng-template" id="headerCheckbox.html">
+    <input type="checkbox" class="select-all" ng-model="mortgageOrder.selected" ng-click="selectAll(mortgageOrder.selected);" />
+</script>

@@ -1,0 +1,113 @@
+<div ng-init="proQuery();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="refreshReport();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <!--渠道-->
+                <div class="mr">
+                    <label class="font-x  px-i0">渠道：</label> 
+                    <select class="emb form-control" ng-model="channel_id" ng-options="node.code as node.name for node in channels">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <!--口令-->
+                <div class="mr">
+                    <label class="font-x  px-i0">口令：</label> 
+                    <input class="emb form-control" type="text" ng-model="code"/>
+                </div>
+            </li>
+            <li>
+                <!--口令状态-->
+                <div class="mr">
+                    <label class="font-x  px-i0">口令状态：</label> 
+                    <select class="emb form-control" ng-model="is_used" ng-options="node.id as node.name for node in codeStatus">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <!--发放状态-->
+                <div class="mr">
+                    <label class="font-x  px-i0">发放状态：</label> 
+                    <select class="emb form-control" ng-model="is_send" ng-options="node.id as node.name for node in usedStatus">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <!--兑换人-->
+                <div class="mr">
+                    <label class="font-x  px-i0">兑换人：</label> 
+                    <input class="emb form-control" type="text" ng-model="user_id"/>
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x  px-i0">物品类型：</label> 
+                    <select class="emb form-control" ng-model="goods_type" ng-options="node.id as node.name for node in goodTypes">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x  px-i0">生成时间：</label> 
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="insert_time" id="insert_time" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})" />
+                </div>
+            </li>
+            <li>
+                <!--活动-->
+                <div class="mr">
+                    <label class="font-x  px-i0">活动：</label> 
+                    <select class="emb form-control" ng-model="activity_id" ng-options="node.activity_id as node.name for node in activities">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns">
+            <!-- 搜索-->
+            <button class="eii btn btn-primary" ng-click="proQuery();">搜索</button>
+            <!-- 导出-->
+            <button class="eii btn btn-primary" ng-click="proExport();">导出</button>
+            <!-- 添加-->
+            <button class="eii btn btn-primary" ng-click="proAdd();">添加</button>         
+        </div>
+    </div>
+    <div class="reportCont">
+            <h3 class="title">优惠码管理列表</h3>
+            <div class="with100">
+                <button type="button" class="fright btn btn-primary" ng-click="proDelete()">
+                    删除
+                </button>
+                <button type="button" class="fright mr10 btn btn-primary" ng-click="proGrant()">
+                    发放
+                </button>
+            </div>
+            {{selected}}
+            <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+            <table ng-table="promocode.tableParams" class="reportTable table-striped table table-bordered">
+                <tr ng-repeat="item in list">
+                    <td header="'headerCheckbox.html'"><input type="checkbox" ng-model="item.selected" /></td>
+                    <td data-title="'口令码'">{{item.code}}</td>
+                    <td data-title="'渠道'">{{item.channel_id}}</td>
+                    <td data-title="'类型'">{{item.type}}</td>
+                    <td data-title="'兑换人'">{{item.user_id}}</td>
+                    <td data-title="'兑换时间'">{{item.exchange_date|date:'yyyy-MM-dd'}}</td>
+                    <td data-title="'兑换物品'">{{item.goods}}</td>
+                    <td data-title="'口令过期时间'">{{item.code_expirydate|date:'yyyy-MM-dd'}}</td>
+                    <td data-title="'生成时间'">{{item.insert_time|date:'yyyy-MM-dd'}}</td>
+                    <td data-title="'口令状态'">{{item.is_used}}</td>
+                    <td data-title="'发放状态'">{{item.is_send}}</td>
+                    <td data-title="'操作'" width="60"><a class="operate" ng-click="proEdit(item.code)">修改</a></td>
+                </tr>
+            </table>
+    </div>
+</div>
+<!-- 全选复选框 -->
+<script type="text/ng-template" id="headerCheckbox.html">
+    <input type="checkbox" class="select-all" ng-model="promocode.selected" ng-click="selectAll(promocode.selected);" />
+</script>

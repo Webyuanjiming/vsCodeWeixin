@@ -1,0 +1,65 @@
+<div class="row-query">
+    <div class="row-head">基础信息：</div>
+    <div class="row-body clearfix">
+        <div class="ml">
+            <label class="font-x">注册时间：</label>                            
+            <input type="text" class="dateRangePicker" jj-date-range-picker id="dq_reg_date">
+            <input type="hidden" class="start" id="dq_reg_startdate">
+            <input type="hidden" class="end" id="dq_reg_enddate">
+            <a class="clear"></a>
+        </div>
+        <div class="ml">
+            <label class="font-x">实名时间：</label>                            
+            <input type="text" class="dateRangePicker" jj-date-range-picker id="dq_real_date">
+            <input type="hidden" class="start" id="dq_real_startdate">
+            <input type="hidden" class="end" id="dq_real_enddate">
+            <a class="clear"></a>
+        </div>
+        <!--客服-->
+        <div class="ml w305 clearboth">
+            <label class="font-x">客服：</label> 
+            <select class="emb form-control" ng-model="user.kefu"  ng-options="node.VALUE as node.NAME for node in kefus">
+            </select>
+        </div>
+        <!--姓名-->
+        <div class="ml w305">
+            <label class="font-x">姓名：</label> 
+            <input class="emb form-control" type="text" ng-model="user.realname" />
+        </div>                        
+        <!--渠道-->
+        <div class="ml w305">
+            <label class="font-x">渠道：</label> 
+            <select class="emb form-control" ng-model="user.channel"  ng-options="node.VALUE as node.NAME for node in channels">
+                <option value=""></option>
+            </select>
+        </div>
+        <!--身份证号-->
+        <div class="ml w305">
+            <label class="font-x">身份证号：</label> 
+            <input class="emb form-control" type="text" ng-model="user.idcard" />
+        </div>
+        <!--QQ-->
+        <div class="ml w305 clearboth">
+            <label class="font-x">QQ：</label> 
+            <input class="emb form-control" type="text" ng-model="user.qq" />
+        </div>
+        <!--微信-->
+        <div class="ml w305">
+            <label class="font-x">微信：</label> 
+            <input class="emb form-control" type="text" ng-model="user.wechat"/>
+        </div>
+        <!--邮箱-->
+        <div class="ml w305">
+            <label class="font-x">邮箱：</label> 
+            <input class="emb form-control" type="text" ng-model="user.email"/>
+        </div>
+        <!--位置-->
+        <div class="ml">
+            <label class="font-x">位置：</label> 
+            <select class="emb form-control" ng-model="user.province"  ng-options="node.ID as node.NAME for node in provinces">
+            </select>
+            <select class="emb form-control" ng-model="user.city"  ng-options="node.ID as node.NAME for node in cities">
+            </select>
+        </div>
+    </div>
+</div>

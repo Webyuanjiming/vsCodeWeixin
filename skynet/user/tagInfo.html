@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" ng-click="close(false)" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">{{dialogTitle}}</h4>
+</div>
+<div class="modal-body row">
+	<div class="tag-bd">
+		<!-- <div class="tag-list clearfix">
+			<div class="tag-label">投资能力:</div>
+			<div class="tag-content">
+				<span ng-click="tagChecked('capacity','1');" ng-class="{true: 'active'}[capacity['1']]">一般</span>
+				<span ng-click="tagChecked('capacity','2');" ng-class="{true: 'active'}[capacity['2']]">低</span>
+			</div>				
+		</div>
+		<div class="tag-list clearfix">
+			<div class="tag-label">投资意愿:</div>
+			<div class="tag-content">
+				<span ng-click="tagChecked('wish','1');" ng-class="{true: 'active'}[wish['1']]">一般</span>
+				<span ng-click="tagChecked('wish','2');" ng-class="{true: 'active'}[wish['2']]">低</span>
+			</div>
+		</div>
+		<div class="tag-list clearfix">
+			<div class="tag-label">自定义:</div>
+			<div class="tag-content">
+				<span ng-click="tagChecked('personal','1');" ng-class="{true: 'active'}[personal['1']]">一般</span>
+				<span ng-click="tagChecked('personal','2');" ng-class="{true: 'active'}[personal['2']]">低</span>
+			</div>
+		</div> -->
+		<div class="tag-list clearfix" ng-repeat="item in taglist">
+			<div class="tag-label" ng-bind="item.labelCn"></div>
+			<div class="tag-content">
+				<span ng-repeat="tag in item.tags" ng-style="{color:'{{tag.fontColor}}','border-color':'{{tag.color}}'}" ng-click="tagChecked(tag.id);" ng-class="{true: 'active'}[change[tag.id]]" ng-bind="tag.labelCn" ng-attr-title="{{tag.memo}}"></span>
+			</div>				
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-disabled="loadingState" ng-click="doAction()">确定</button>
+    <button class="btn btn-default" type="button" ng-click="close(false)">取消</button>
+</div> 

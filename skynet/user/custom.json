@@ -1,0 +1,226 @@
+{
+    "status": true,
+    "loginStatus": true,
+    "msg": null,
+    "data": null,
+    "entity": {
+        "dv_user": [
+            {
+                "appVersion": "161124",
+                "realVerifyFlg": "1",
+                "city": 240,
+                "endDate": "2017-02-21",
+                "firstResult": 1481212800000,
+                "bankName": "中国银行",
+                "bankCardId": "6217858000015708867",
+                "emailVerifyFlg": "1",
+                "province": 16,
+                "cityName": "河南省",
+                "kefu": "聚金航航",
+                "email": "firetw@163.com",
+                "registerDate": 1413454941000,
+                "userHeadFileId": "7524",
+                "birthDay": 439660800000,
+                "lastVersion": "161123",
+                "phoneSpec": "X800",
+                "nickName": "buzhidaoqusha",
+                "sex": "1",
+                "userId": "firetw",
+                "bankNameCode": 87,
+                "compressDate": 1481212800000,
+                "realName": "王宁",
+                "phoneNumber": "13683815260",
+                "emailVerifyDate": 1413454941000,
+                "cardId": "410225198312086132",
+                "typeId": "01",
+                "phoneVerifyDate": 1465368133000,
+                "location": "河南省郑州市金水区金水东路靠近中国农业银行(郑州郑东支行)",
+                "provinceName": "河南省",
+                "realVerifyDate": 1465368163000,
+                "age": "33        ",
+                "phoneVerifyFlg": "1"
+            }
+        ],
+        "dv_user_account": [
+            {
+                "balance": 1404.3,
+                "frost": 0,
+                "await": 37364.34,
+                "continueTotal": 0,
+                "userId": "firetw",
+                "capitalTotal": 1404.3,
+                "coin": 6.3
+            }
+        ],
+        "dv_user_ticket": [
+            {
+                "ticketValue": 0.2,
+                "ticketCount": 1,
+                "endDate": "2016-04-29 23:59:59",
+                "ticketId": "9b0ac80e-a5a7-43b7-b732-8bc2d6dc6c66",
+                "ticketName": "喜迎五一加息劵"
+            },
+            {
+                "ticketValue": 0.2,
+                "ticketCount": 1,
+                "endDate": "2016-04-29 23:59:59",
+                "ticketId": "9b0ac80e-a5a7-43b7-b732-8bc2d6dc6c66",
+                "ticketName": "喜迎五一加息劵"
+            },
+            {
+                "ticketValue": 0.2,
+                "ticketCount": 1,
+                "endDate": "2016-04-29 23:59:59",
+                "ticketId": "9b0ac80e-a5a7-43b7-b732-8bc2d6dc6c66",
+                "ticketName": "喜迎五一加息劵"
+            },
+            {
+                "ticketValue": 0.4,
+                "ticketCount": 1,
+                "endDate": "2016-08-03 23:59:59",
+                "ticketId": "66849410-746e-45bc-997f-688bbe6d6111",
+                "ticketName": "从天而降"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 1,
+                "endDate": "2016-07-21 23:59:59",
+                "ticketId": "b77c4699-eeb7-4435-b3e9-496fb8600ca3",
+                "ticketName": "天明集团强势入股聚金资本，聚金券"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 3,
+                "endDate": "2015-12-20 00:00:00",
+                "ticketId": "20151111",
+                "ticketName": "2015双十一抽奖0.5%聚金券"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 1,
+                "endDate": "2016-02-15 23:59:59",
+                "ticketId": "2015201605",
+                "ticketName": "2016跨年暖冬活动抽奖0.5%聚金券"
+            },
+            {
+                "ticketValue": 1,
+                "ticketCount": 10,
+                "endDate": "2016-09-20 00:00:00",
+                "ticketId": "2016zqcj1",
+                "ticketName": "2016中秋抽奖1%加息券"
+            },
+            {
+                "ticketValue": 1.5,
+                "ticketCount": 13,
+                "endDate": "2016-09-21 23:59:59",
+                "ticketId": "2016zqcj15",
+                "ticketName": "2016中秋抽奖1.5%加息券"
+            },
+            {
+                "ticketValue": 2,
+                "ticketCount": 6,
+                "endDate": "2016-09-21 23:59:59",
+                "ticketId": "2016zqcj2",
+                "ticketName": "2016中秋抽奖2%加息券"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 110,
+                "endDate": "2016-09-18 00:00:00",
+                "ticketId": "2016zqcj05",
+                "ticketName": "2016中秋抽奖0.5%加息券"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 1,
+                "endDate": "2015-10-24 00:00:00",
+                "ticketId": "d11aff63-82ee-42c2-8c37-cd99c6fc68d8",
+                "ticketName": "聚金中秋月聚金券"
+            },
+            {
+                "ticketValue": 1.2,
+                "ticketCount": 1,
+                "endDate": "2016-05-08 23:59:59",
+                "ticketId": "60fbcf86-608c-4025-9ed2-94e7ed1dcfec",
+                "ticketName": "五一加息券"
+            },
+            {
+                "ticketValue": 1.2,
+                "ticketCount": 1,
+                "endDate": "2016-05-08 23:59:59",
+                "ticketId": "60fbcf86-608c-4025-9ed2-94e7ed1dcfec",
+                "ticketName": "五一加息券"
+            },
+            {
+                "ticketValue": 1.2,
+                "ticketCount": 1,
+                "endDate": "2016-05-08 23:59:59",
+                "ticketId": "60fbcf86-608c-4025-9ed2-94e7ed1dcfec",
+                "ticketName": "五一加息券"
+            },
+            {
+                "ticketValue": 1,
+                "ticketCount": 1,
+                "endDate": "2016-09-17 23:59:59",
+                "ticketId": "918abc52-38cd-439f-829c-d1503e960a6c",
+                "ticketName": "天眼中秋加息券"
+            },
+            {
+                "ticketValue": 2,
+                "ticketCount": 1,
+                "endDate": "2015-06-17 00:00:00",
+                "ticketId": "9c1e29eb-a89e-4a58-9134-c6132b6e7261",
+                "ticketName": "20150517聚金优选赠送2%聚金券"
+            },
+            {
+                "ticketValue": 0.5,
+                "ticketCount": 1,
+                "endDate": "2017-01-07 23:59:59",
+                "ticketId": "f448a74f-a885-4961-b280-c2aa367ab464",
+                "ticketName": "加息券0.5%"
+            }
+        ],
+        "dv_user_tender": [
+            {
+                "lastTenderTime": 1482150279000,
+                "tenderThreeMon": 69,
+                "firstTenderAccount": 500,
+                "topAwait": 50659.54,
+                "firstResult": 1482163200000,
+                "lastTenderPeriod": 3,
+                "topAwaitDate": 1479830400000,
+                "firstPeriodType": 1,
+                "lastPeriodType": 1,
+                "mobileTenderCount": 87,
+                "cashTotal": 196212,
+                "lastTenderBorrow": "2016121900000000000000003548",
+                "tenderOneMon": 116,
+                "bottomAwaitDate": 1496937600000,
+                "autoTenderTotal": 29200,
+                "lastTenderAccount": 100,
+                "maxAccountOneBorrow": 15900,
+                "continueCcount": 9,
+                "tenderCount": 235,
+                "tenderFourMon": 2,
+                "rechargeTotal": 56747.5,
+                "autoTenderCount": 43,
+                "bottomAwait": 101.35,
+                "firstTenderPeriod": 2,
+                "firstTenderBorrow": "2014120300000000000000001229",
+                "tenderTwoMon": 10,
+                "userId": "firetw",
+                "firstTenderTime": 1417588064000,
+                "compressDate": 1482163200000,
+                "continueAmount": 5378.52,
+                "tenderCoinTotal": 341.89,
+                "tenderAddAccountTotal": 26.12,
+                "maxTenderCountBorrow": "2016091400000000000000003091",
+                "tenderFiveMon": 0,
+                "tenderTotal": 265911.87,
+                "tenderSixMon": 19,
+                "maxAccountBorrow": "2016052600000000000000002575",
+                "maxTenderCountOneBorrow": 5
+            }
+        ]
+    }
+}

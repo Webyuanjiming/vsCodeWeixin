@@ -1,0 +1,32 @@
+<div class="row-query">
+    <div class="row-head">投资信息：</div>
+    <div class="row-body">
+        <div class="ml">
+            <label class="font-x">投资时间：</label>                            
+            <input class="editbox4 form-control Wdate" id="" size="12" type="text" id="tenddatemin" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})">
+            <span>-</span>
+            <input class="editbox4 form-control Wdate" id="" size="12" type="text" id="tenddatemax" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})">
+        </div>
+        <div class="ml">
+            <label class="font-x">投资金额：</label>                            
+            <input class="emb form-control" type="number" ng-model="tend.tendamountmin"/>
+            <span>-</span>
+            <input class="emb form-control" type="number" ng-model="tend.tendamountmax"/>
+        </div>
+        <div class="ml">
+            <label class="font-x">回款时间：</label>                            
+            <input class="editbox4 form-control Wdate" id="" size="12" type="text" id="recoverdatemin" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})">
+            <span>-</span>
+            <input class="editbox4 form-control Wdate" id="" size="12" type="text" id="recoverdatemax" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})">
+        </div>
+        <div class="ml">
+            <label class="font-x">投资途径：</label> 
+            <select class="emb form-control" ng-model="tend.tendtype">
+                <option value=""></option>
+                <option value="">PC</option>
+                <option value="">APP</option>
+                <option value="">微信</option>
+            </select>
+        </div>
+    </div>
+</div>

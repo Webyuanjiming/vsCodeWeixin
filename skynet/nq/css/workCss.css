@@ -1,0 +1,390 @@
+/*************
+**author:Webyuanjiming**
+**@ Create by w8 0n 2017/03/17**
+**page:workCss**
+**************/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	font-family: '微软雅黑';
+    background-color: #fff;
+}
+
+ul,li{
+	list-style-type: none;
+}
+
+/*================*
+ * workCss*
+ *================*/
+.workAll{
+    width: 100%;
+}
+.line {
+    height: 2px;
+    line-height: 2px;
+    background: #e8e8e8;
+    width:1200px;
+    margin:20px auto;
+    min-height: 2px;
+}
+.line_re2 {
+    height: 2px;
+    line-height: 2px;
+    background: #E90111;
+    width: 8%;
+    min-height: 2px;
+}
+.com_message{
+    width: 1200px;
+    overflow: hidden;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.com_message .minitab{
+    width: 118px;
+    height: auto;
+    float: left;
+    display: inline-block;
+}
+.com_message .minitab ul li {
+    margin-top: 10px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+}
+.com_message .minitab ul li.cur a {
+    background: url(../images/minitabcur.png) repeat-y #eef6f9;
+    color: #000;
+}
+.com_message .minitab ul li a {
+    display: block;
+    height: 45px;
+    padding-left: 20px;
+    color: #606060;
+    background: #dedede;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+}
+.com_message .minitab ul li a span {
+    background: url(../images/point2.png) no-repeat left center;
+    padding-left: 7px;
+    display: inline-block;
+}
+
+/*right*/
+.com_message .list_l {
+    float: right;
+    width:1072px;
+    color: #606060;
+    margin-top: 8px;
+}
+.com_message .list_l table {
+    border-collapse: collapse;
+    border-top: 2px solid #a9a9a9;
+}
+table {
+    font-size: small;
+    background: #FFFFFF;
+}
+.com_message .list_l table td {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: left;
+    padding: 10px 30px;
+    line-height: 26px;
+    vertical-align: top;
+}
+.com_message .list_l table .gray {
+    background: #f0f5f9;
+    border-right: 1px solid #e8e8e8;
+    font-size: 14px;
+    color: #444;
+}
+.gpqk {
+    font-size: 12px;
+    border-top: none;
+}
+.gpqk thead th {
+    background: #eef6f9;
+    border: 1px solid #e8e8e8;
+}
+.com_message .list_l table.gpqk td {
+    text-align: center;
+    border: 1px solid #e8e8e8;
+}
+.com_message .list_l table th {
+    height: 38px;
+    color: #000;
+    font-weight: bold;
+    background: #f0f5f9;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.mask_bak {
+    background-color: #e8e8e8;
+    width: 1072px;
+    height: 100%;
+    position: absolute;
+    top:10px;
+    right:0;
+    opacity: 0.95;
+}
+.bak-try {
+    position: relative;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    top: 30%;
+}
+
+/**公司公告**/
+.com_message .list_l .list table {
+    border-collapse: collapse;
+    border-top: 2px solid #a9a9a9;
+}
+.mytable {
+    width: 100%;
+    position: relative;
+    zoom: 1;
+    color: #606060;
+}
+table {
+    font-size: small;
+    background: #FFFFFF;
+}
+.com_message .list_l .list table th {
+    height: 38px;
+    color: #000;
+    font-weight: bold;
+    background: #f0f5f9;
+    border-bottom: 1px solid #e8e8e8;
+}
+.com_message .list_l .list table .tc {
+    text-align: center;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+.com_message .list_l .list table td {
+    border-bottom: 1px solid #e8e8e8;
+    text-align: center;
+    padding: 10px;
+    line-height: 26px;
+    vertical-align: middle;
+}
+.mytable td {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #E8E8E8;
+}
+.com_message .list_l .list table .tl {
+    text-align: left;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+.innovation_ico {
+    background: url(../images/innovation_ico.png) no-repeat 0 center;
+    width: 20px;
+    height: 20px;
+    padding: 0 20px;
+}
+.base_ico {
+    background: url("../images/base_ico.png") no-repeat 0 center;
+    width: 20px;
+    height: 20px;
+    padding: 0 20px;
+}
+.mytable tr td em {
+    color: #606060;
+}
+em {
+    font-style: normal;
+}
+table.mytable tbody tr td img {
+    width: 26px;
+    height: 23px;
+    vertical-align: bottom;
+}
+
+/**-分页-**/
+.jj-pagination{
+    text-align: center;
+    overflow: hidden;
+    height: 32px;
+    line-height: 32px;
+}
+.jj-pagination li:first-child{margin-left: 0px;}
+.jj-pagination li{
+    line-height: 30px;
+    background: #efefef;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial, "Microsoft YaHei", san-serif;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #DEDEDE;
+    float: left;
+    margin-left: -1px;
+}
+.jj-pagination li.active, .jj-pagination li:hover {
+    background: #4baefb;
+    color: #FFF;
+    border: 1px solid #4baefb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.jj-pagination .pageInfos{
+    float: left;
+    margin-left: 10px;
+}
+.jj-pagination li span{
+    display: block;
+}
+
+/***个股行情***/
+
+.quotation {
+    margin: 0 0 30px 0;
+    border-radius: 10px;
+    background: #eceaeb;
+    padding: 25px;
+    color: #616161;
+}
+.fix {
+    display: block;
+}
+.quotation .name {
+    float: left;
+    width: 300px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.quotation .name p {
+    padding: 2px 0;
+}
+.quotation .name p span {
+    font-size: 20px;
+    padding-top: 5px;
+}
+.quotation .time {
+    float: left;
+    width: 300px;
+    padding-top: 15px;
+    line-height: 35px;
+}
+.quotation .btn {
+    float: right;
+    width: auto;
+    padding-top: 15px;
+}
+.fl {
+    float: left;
+    display: inline;
+}
+.quotation .btn a {
+    display: inline-table;
+    background: #fff;
+    border: 1px solid #c93033;
+    height: 30px;
+    margin: 0 5px;
+    line-height: 30px;
+    text-align: center;
+    color: #616161;
+    padding: 0 10px;
+}
+.fix:before,.fix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.com_message .list {
+    color: #606060;
+    clear: both;
+}
+.com_message .list table {
+    border-collapse: collapse;
+    border-top: 2px solid #a9a9a9;
+    background: #FFFFFF;
+}
+.com_message .quolist table tr.th2 th {
+    color: #606060;
+    font-weight: normal;
+    vertical-align: top;
+    padding: 8px 0;
+}
+.com_message .list table .tc {
+    text-align: center;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+}
+.com_message .quolist table tr td .abtn1 {
+    font-size: 12px;
+}
+.com_message .list td a.abtn1 {
+    background: #555753;
+    width: 35px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    font-size: 10px;
+    color: #ffffff;
+    margin-right: 3px;
+}
+.com_message .quolist table tr td .abtn2 {
+    font-size: 12px;
+}
+.com_message .list td a.abtn2 {
+    background: #ca3033;
+    width: 35px;
+    height: 26px;
+    line-height: 26px;
+    display: inline-block;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.price {
+    border-radius: 10px;
+    background: #eceaeb;
+    padding: 25px 0 25px 25px;
+    color: #616161;
+    margin-top: 30px;
+}
+.price .cont {
+    float: left;
+    width: 523px;
+    padding-right: 25px;
+}
+.price .cont table {
+    border: 1px solid #a9a9a9;
+}
+.com_message .price .cont table th {
+    height: 54px;
+    background: #f0f5f9;
+    font-size: 12px;
+    font-weight: normal;
+    color: #616161;
+}
+.price .cont table .c1 {
+    background: #f2f0f1;
+}
+.price .cont table .c2 {
+    background: #f4f4f4;
+}
+.price .cont table td {
+    text-align: center;
+    padding: 10px;
+    line-height: 34px;
+    vertical-align: top;
+}

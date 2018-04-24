@@ -1,0 +1,9 @@
+<div class="row-query">
+    <div class="row-head">标签：</div>
+    <div class="row-body clearfix">
+        <div class="ml" ng-repeat="item in taglist">
+            <label class="font-x">{{item.labelCn}}：</label>   
+            <span class="tag" ng-class="{true: 'active'}[tag[tagitem.id]]" ng-repeat="tagitem in item.tags"  ng-bind="tagitem.labelCn" ng-attr-title="{{tagitem.memo}}" ng-click="tagSelect(tagitem.id);"></span>          
+        </div>
+    </div>
+</div>

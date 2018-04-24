@@ -1,0 +1,36 @@
+<div ng-init="changeQuery();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="refreshReport();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <!--类型-->
+                <div class="mr">
+                    <label class="font-x  px-i0">类型：</label> 
+                    <select class="emb form-control" ng-model="exchangeType" ng-options="node.id as node.name for node in types">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns">
+            <!-- 搜索-->
+            <button class="eii btn btn-primary" ng-click="changeQuery();">搜索</button>
+            <!-- 添加-->
+            <button class="eii btn btn-primary" ng-click="changeAdd();">添加</button>         
+        </div>
+    </div>
+    <div class="reportCont">
+        <h3 class="title">兑换物品管理列表</h3>
+        <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+        <table ng-table="exchange.tableParams" class="reportTable table-striped table table-bordered">
+            <tr ng-repeat="item in changelist">
+                <td data-title="'序号'">{{((currentPage-1)*curPerPage)+($index+1)}}</td>
+                <td data-title="'物品名称'">{{item.name}}</td>
+                <td data-title="'类型'">{{item.type}}</td>
+                <td data-title="'值'">{{item.value}}</td>
+                <td data-title="'操作'" width="80"><a class="operate" ng-click="changeEdit(item.id)">修改</a><a class="operate" ng-click="changeDelete(item.id)">删除</a></td>
+            </tr>
+        </table>
+    </div>
+</div>

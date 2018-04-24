@@ -1,0 +1,43 @@
+<form name="form">
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>渠道标识：</label>
+        <input type="text" required ng-maxlength="2" name="code" ng-disabled="formData.id" ng-model="formData.code" class="form-control awidth" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel"><span class="text-danger">*</span>渠道名称：</label>
+        <input type="text" required ng-model="formData.name" name="name" class="form-control awidth" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel">联系人：</label>
+        <input type="text" ng-model="formData.contact" class="form-control awidth" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel">手机：</label>
+        <input type="text" ng-model="formData.mobile" class="form-control awidth" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel">固话：</label>
+        <input type="text" ng-model="formData.fixedphone" class="form-control awidth" />
+    </div>
+    <div class="col-sm-6 clearfix">
+        <label class="flabel">负责人：</label>
+        <input type="text" ng-model="formData.director" class="form-control awidth"/>
+    </div>
+    <div class="col-sm-12 clearfix">
+        <label class="flabel">地址：</label>
+        <input type="text" ng-model="formData.address" class="form-control" style="width: 84%;" />
+    </div>
+    <div class="col-sm-12 clearfix">
+        <input type="hidden" ng-model="formData.id"/>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.code.$dirty && form.code.$invalid">
+        <span ng-show="form.code.$error.required" class="text-danger">渠道标识为必填项。</span>
+        <span ng-show="form.code.$error.maxlength" class="text-danger">渠道标识最多输入两位。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="form.name.$dirty && form.name.$invalid">
+        <span ng-show="form.name.$error.required" class="text-danger">渠道名称为必填项。</span>
+    </div>
+    <div class="col-sm-12 clearfix ml80" ng-show="channelExist">
+        <span class="text-danger">该渠道标识已经存在，请重新输入。</span>
+    </div>
+</form>         

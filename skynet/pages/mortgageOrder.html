@@ -1,0 +1,86 @@
+<div ng-init="proQuery();" class="main-cont">
+    <a href="javascript:void(0);" class="refresh" ng-click="proQuery();"></a>
+    <a href="javascript:void(0);" class="icon-t" jj-main-fold></a>
+    <div class="order-manager">
+        订单管理&nbsp;/&nbsp;房抵贷列表
+    </div>
+    <div class="queryCont">
+        <ul>
+            <li>
+                <!--下单时间-->
+                <div class="mr">
+                    <label class="font-x  px-i0">下单时间：</label>
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="startTime" id="start_time" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})" />
+                </div>
+            </li>
+            <li>
+                <div class="mr">
+                    <label class="font-x">至</label>
+                    <input class="editbox4 form-control Wdate" size="12" type="text" ng-model="endTime" id="end_time" onfocus="WdatePicker({readOnly:true,dateFmt:'yyyy-MM-dd'})" />
+                </div>
+            </li>
+            <li>
+                <!--全部订单-->
+                <div class="mr">
+                    <label class="font-x  px-i0">全部订单：</label>
+                    <select class="emb form-control" ng-model="order_st" ng-options="node.id as node.name for node in codeStatus">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </li>
+            <li>
+                <!--待操作-->
+                <button class="btn-mort" ng-click="operating();">待操作</button>
+            </li>
+            <li>
+                <!--售后-->
+                <button class="btn-mort" ng-click="afterMarket();">售后</button>
+            </li>
+            <li>
+                <!--可输入订单号/姓名/手机号-->
+                <div class="mr">
+                    <input class="emb form-control" style="width:170px;position:relative;top:-7px;" type="text" ng-model="keyword" placeholder="可输入订单号/姓名/手机号"/>
+                </div>
+            </li>
+        </ul>
+        <div class="queryBtns">
+            <!--搜索-->
+            <button class="eii btn btn-primary" ng-click="proQuery();">搜索</button>
+            <!--导出-->
+            <button class="eii btn btn-primary" ng-click="proExport();">导出</button>
+            <!--添加-->
+            <!--<button class="eii btn btn-primary" ng-click="proAdd();">添加</button>-->
+        </div>
+    </div>
+    <div class="reportCont">
+            <!--<div class="with100">
+                <button type="button" class="fright btn btn-primary" ng-click="proDelete()">
+                    删除
+                </button>
+                <button type="button" class="fright mr10 btn btn-primary" ng-click="proGrant()">
+                    发放
+                </button>
+            </div>-->
+            {{selected}}
+            <a href="javascript:void(0);" class="icon-bar" jj-cont-zoom></a>
+            <table ng-table="mortgageOrder.tableParams" class="reportTable table-striped table table-bordered">
+                <tr ng-repeat="item in list">
+                    <td header="'headerCheckbox.html'"><input type="checkbox" ng-model="item.selected" /></td>
+                    <td data-title="'订单id'">{{item.order_id}}</td>
+                    <td data-title="'订单号'">{{item.order_sn}}</td>
+                    <td data-title="'产品名称'">{{item.product_name}}</td>
+                    <td data-title="'姓名'">{{item.true_name}}</td>
+                    <td data-title="'手机号'">{{item.user_name}}</td>
+                    <td data-title="'下单时间'">{{item.create_date*1000|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td data-title="'订单状态'">{{item.order_status}}</td>
+                    <td data-title="'下单更新时间'">{{item.update_date*1000|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td data-title="'操作'" width="100"><a class="operate" ng-click="orderDetail(item.order_id)">订单详情</a></td>
+                    <!--<td data-title="'操作'" width="60"><a class="operate" ng-click="proEdit(item.code)">修改</a></td>-->
+                </tr>
+            </table>
+    </div>
+</div>
+<!-- 全选复选框 -->
+<script type="text/ng-template" id="headerCheckbox.html">
+    <input type="checkbox" class="select-all" ng-model="mortgageOrder.selected" ng-click="selectAll(mortgageOrder.selected);" />
+</script>
